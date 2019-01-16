@@ -54,11 +54,27 @@ nav {
 }
 .menu-button{
 	height: 3em;
-	margin: 1em;
+  margin: 1em;
+  opacity:0.6;
+  transition: all 100ms;
+  cursor:pointer;
+}
+.menu-button:hover{
+	opacity:0.9;
+}
+.menu-button:active{
+  transform:scale(0.9);
 }
 li {
   list-style: none;
   line-height: 1.7em;
+}
+.list-link{
+  transition: all 100ms;
+  cursor:pointer;
+}
+.list-link:hover{
+  color:white;
 }
 .section-title {
 	grid-area: section-title;
@@ -93,6 +109,14 @@ footer > div{
 .footer-logo {
 	height: 1.5em;
 	margin: 0.7em;
+	opacity: 0.8;
+}
+.footer-logo:hover {
+	opacity: 1;
+}
+.footer-logo:active{
+  opacity: 1;
+  transform:scale(0.9);
 }
 #logo-image {
   width: 550px;
@@ -109,7 +133,13 @@ footer > div{
 .logo-image {
   padding: 0.5em;
   height: 3em;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+.code-link:hover {
+opacity: 1;
+}
+.code-link:active {
+  transform:scale(0.8);
 }
 .contact-button {
   border-top: solid #fff3 1px;
@@ -123,6 +153,11 @@ footer > div{
   color: white;
   padding: 0.5em 1.5em;
   font-size: 1.1em;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.contact-button:hover {
+	transform: scale(1.1);
 }
 .contact-button::after {
   content: " ";
