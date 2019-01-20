@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import logoSub from "./images/logo-with-sub.svg";
-import menuButton from "./images/menu-button.svg";
 import htmlLogo from "./images/html-logo.png";
 import cssLogo from "./images/css-logo.png";
 import jsLogo from "./images/js-logo.png";
@@ -24,49 +23,49 @@ class App extends Component {
         }, 
         pomodoroClock:{
           title: "Pomodoro Clock",
-          media: "",
-          libraries: [],
-          description: "",
+          media: webImage,
+          libraries: [htmlLogo,cssLogo,jsLogo,reactLogo],
+          description: "text",
           pageLink: "",
           githubLink: "",
         }, 
         weatherCards:{
           title: "Weather Cards",
-          media: "",
-          libraries: [],
-          description: "",
+          media: webImage,
+          libraries: [htmlLogo,cssLogo,jsLogo,reactLogo],
+          description: "text",
           pageLink: "",
           githubLink: "",
         }, 
         calculator:{
           title: "Calculator",
-          media: "",
-          libraries: [],
-          description: "",
+          media: webImage,
+          libraries: [htmlLogo,cssLogo,jsLogo,reactLogo],
+          description: "text",
           pageLink: "",
           githubLink: "",
         }, 
         linuxMint:{
           title: "Linux Mint",
-          media: "",
-          libraries: [],
-          description: "",
+          media: webImage,
+          libraries: [htmlLogo,cssLogo,jsLogo],
+          description: "text",
           pageLink: "",
           githubLink: "",
         }, 
         typhon:{
           title: "Typhon",
-          media: "",
-          libraries: [],
-          description: "",
+          media: webImage,
+          libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
+          description: "text",
           pageLink: "",
           githubLink: "",
         }, 
         coreCorrectHealth:{
           title: "Core Correct Health",
-          media: "",
-          libraries: [],
-          description: "",
+          media: webImage,
+          libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
+          description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
           pageLink: "",
           githubLink: "",
         }, 
@@ -85,9 +84,14 @@ class App extends Component {
           <img src={logoSub} id="logo-image" alt="" />
         </div>
         <NavigationMenu />
-        <WebsiteTitle name={this.state.newName}/>
-        <WebsiteImage />
-        <WebsitePage />
+        <WebsitePage activePage={this.state.pages.coreCorrectHealth}/>
+        <WebsitePage activePage={this.state.pages.coreCorrectHealth}/>
+        <WebsitePage activePage={this.state.pages.linuxMint}/>
+        <WebsitePage activePage={this.state.pages.typhon}/>
+        <WebsitePage activePage={this.state.pages.pomodoroClock}/>
+        <WebsitePage activePage={this.state.pages.weatherCards}/>
+        <WebsitePage activePage={this.state.pages.calculator}/>
+        <WebsitePage activePage={this.state.pages.coreCorrectHealth}/>
         <Footer />
         <button className="contact-button">CONTACT ME</button>
       </div>
@@ -101,49 +105,32 @@ class NavigationMenu extends App {
   render() {
     return (
       <nav>
-        <img className="menu-button" src={menuButton} alt="" />
         <ul className="menu-list">
           <li className="list-link">Who am I</li>
           <li>
-            Widgets
+            Published Websites
             <ul>
-              <li className="list-link">▬ Pomodoro Clock</li>
-              <li className="list-link">▬ Weather Cards</li>
-              <li className="list-link">▬ Calculator</li>
+              <li className="list-link">Core Correct Health</li>
             </ul>
           </li>
           <li>
             Mock websites
             <ul>
-              <li className="list-link">▬ Linux Mint</li>
-              <li className="list-link">▬ Typhon</li>
+              <li className="list-link">Linux Mint</li>
+              <li className="list-link">Typhon</li>
             </ul>
           </li>
           <li>
-            Published Websites
+            Widgets
             <ul>
-              <li className="list-link">▬ Core Correct Health</li>
+              <li className="list-link">Pomodoro Clock</li>
+              <li className="list-link">Weather Cards</li>
+              <li className="list-link">Calculator</li>
             </ul>
           </li>
-          <li className="list-link">Contact Me</li>
+
         </ul>
       </nav>
-    );
-  }
-}
-/*=========================WEBSITE TITLE============================================= */
-class WebsiteTitle extends Component {
-  render() {
-    return <h1 className="section-title">{this.props.name}</h1>;
-  }
-}
-/*=========================WEBSITE IMAGE============================================= */
-class WebsiteImage extends App {
-  render() {
-    return (
-      <div className="image-container">
-        <img className="web-image" src={webImage} alt="" />
-      </div>
     );
   }
 }
@@ -151,43 +138,29 @@ class WebsiteImage extends App {
 class WebsitePage extends App {
   render() {
     return (
+      <div className="page-container">
+      <h1 className="section-title">{this.props.activePage.title}</h1>
+      <div className="image-container">
+        <img className="web-image" src={this.props.activePage.media} alt="" />
+      </div>
       <div className="description-container">
         <h3>LANGUAGES, FRAMEWORKS AND LIBRARIES</h3>
         <div className="logos-container">
-          <img src={htmlLogo} alt="" className="logo-image" />
-          <img src={cssLogo} alt="" className="logo-image" />
-          <img src={jsLogo} alt="" className="logo-image" />
-          <img src={bootstrapLogo} alt="" className="logo-image" />
-          <img src={jqueryLogo} alt="" className="logo-image" />
-          <img src={reactLogo} alt="" className="logo-image" />
+        {this.props.activePage.libraries.map( (logo,index) => <img src={logo} alt="" className="logo-image" key={`logo ${index}`}/> )}
         </div>
         <h3>DESCRIPTION</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          luctus justo in urna condimentum condimentum. Nunc non metus erat.
-          Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id
-          vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum
-          nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed
-          dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum
-          rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam,
-          tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas
-          vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac
-          finibus libero nulla vitae justo. Orci varius natoque penatibus et
-          magnis dis parturient montes, nascetur ridiculus mus. Nulla varius
-          mauris quis ullamcorper porta. Curabitur vestibulum urna quis mauris
-          fermentum, quis posuere eros iaculis. Praesent lacus nunc, gravida
-          quis maximus quis, imperdiet at tortor. Interdum et malesuada fames ac
-          ante ipsum primis in faucibus. Suspendisse sit amet commodo libero.
+        <p>{this.props.activePage.description}
         </p>
         <h3>LINKS</h3>
         <div className="logos-container">
-          <a href="https://www.google.com/">
+          <a href={this.props.activePage.pageLink}>
             <img src={screenLogo} alt="" className="logo-image code-link" />
           </a>
-          <a href="https://www.google.com/">
+          <a href={this.props.activePage.githubLink}>
             <img src={githubLogo} alt="" className="logo-image code-link" />
           </a>
         </div>
+      </div>
       </div>
     );
   }
