@@ -66,16 +66,24 @@ li {
   grid-column:1/-1;
 }
 .image-container {
-  padding: 2em;
-  text-align: center;
-  font-family: "Rajdhani", sans-serif;
+	text-align: center;
+	font-family: "Rajdhani", sans-serif;
+	overflow: auto;
+	max-height: 500px;
+	margin: 1.5em;
+	align-self: center;
+  filter: sepia(30%);
+  transition: all 500ms;
+}
+.image-container:hover{
+  filter:sepia(0%);
 }
 .description-container {
-  padding: 2em;
-  font-family: "Rajdhani", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+	padding: 2em;
+	font-family: "Rajdhani", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 footer {
 	border-top: solid #fff3 1px;
@@ -164,5 +172,10 @@ opacity: 1;
   display:grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr;
+}
+.web-description::first-letter {
+	font-size: 300%;
+  font-weight: bolder;
+  float: left
 }
 
