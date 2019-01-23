@@ -179,3 +179,36 @@ opacity: 1;
   float: left
 }
 
+.form-container {
+	grid-column: 2/-1;
+	margin: 1.5em;
+	display: flex;
+	align-items: center;
+	font-family: "Abel", sans-serif;
+	font-size: 1.3em;
+}
+.form-group {
+	margin-bottom: 1em;
+}
+.input-md{
+  width:70%;
+}
+.form-control {
+	background: rgb(255, 255, 255);
+	border: none;
+	padding: 0.2em;
+	border-radius: 2px;
+}
+.submit-button {
+  border: solid #fff3 1px;
+  background: none;
+  color: white;
+  padding: 0.5em 1.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition:all 300ms;
+}
+.submit-button:hover{
+  background:rgba(255,255,255, 0.2);
+  border-color:rgba(255,255,255, 0.2);
+}

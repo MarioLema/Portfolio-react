@@ -11,78 +11,79 @@ import githubLogo from "./images/github-logo.png";
 import codepenLogo from "./images/codepen-logo.svg";
 import linkedinLogo from "./images/linkedin-logo.svg";
 import coreCorrectImage from "./images/core-correct.jpg";
-import calculatorImage from "./images/calculator.jpg"
-import linuxMintImage from "./images/linux-mint.jpg"
-import PomodoroImage from "./images/pomodoro-timer.jpg"
-import typhonImage from "./images/typhon.jpg"
-import weatherCardsImage from "./images/weather-cards.jpg"
-import 'simplebar';
-import 'simplebar/dist/simplebar.min.css';
+import calculatorImage from "./images/calculator.jpg";
+import linuxMintImage from "./images/linux-mint.jpg";
+import PomodoroImage from "./images/pomodoro-timer.jpg";
+import typhonImage from "./images/typhon.jpg";
+import weatherCardsImage from "./images/weather-cards.jpg";
+import "simplebar";
+import "simplebar/dist/simplebar.min.css";
 import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       pages: {
-        intro:{
+        intro: {
           title: "hello"
-        }, 
-        pomodoroClock:{
+        },
+        pomodoroClock: {
           title: "POMODORO TIMER",
           media: PomodoroImage,
-          libraries: [htmlLogo,cssLogo,jsLogo,reactLogo],
+          libraries: [htmlLogo, cssLogo, jsLogo, reactLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/pomodoro-app",
-        }, 
-        weatherCards:{
+          githubLink: "https://github.com/MarioLema/pomodoro-app"
+        },
+        weatherCards: {
           title: "WEATHER CARDS",
           media: weatherCardsImage,
-          libraries: [htmlLogo,cssLogo,jsLogo,reactLogo],
+          libraries: [htmlLogo, cssLogo, jsLogo, reactLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/mars-react",
-        }, 
-        calculator:{
+          githubLink: "https://github.com/MarioLema/mars-react"
+        },
+        calculator: {
           title: "CALCULATOR",
           media: calculatorImage,
-          libraries: [htmlLogo,cssLogo,jsLogo,reactLogo],
+          libraries: [htmlLogo, cssLogo, jsLogo, reactLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/react-calculator",
-        }, 
-        linuxMint:{
+          githubLink: "https://github.com/MarioLema/react-calculator"
+        },
+        linuxMint: {
           title: "LINUX MINT",
           media: linuxMintImage,
-          libraries: [htmlLogo,cssLogo,jsLogo],
+          libraries: [htmlLogo, cssLogo, jsLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/Linux-mint",
-        }, 
-        typhon:{
+          githubLink: "https://github.com/MarioLema/Linux-mint"
+        },
+        typhon: {
           title: "TYPHON",
           media: typhonImage,
           libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/Typhon",
-        }, 
-        coreCorrectHealth:{
+          githubLink: "https://github.com/MarioLema/Typhon"
+        },
+        coreCorrectHealth: {
           title: "CORE CORRECT HEALTH",
           media: coreCorrectImage,
           libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
-          description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
+          description:
+            " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/core-correct",
-        }, 
-        contact:{
+          githubLink: "https://github.com/MarioLema/core-correct"
+        },
+        contact: {
           title: "hello"
         }
       },
       display: 0,
       newName: "hellopp"
-     };
+    };
   }
   render() {
     return (
@@ -91,14 +92,14 @@ class App extends Component {
           <img src={logoSub} id="logo-image" alt="" />
         </div>
         <NavigationMenu />
-        <WebsitePage activePage={this.state.pages.coreCorrectHealth}/>
-        <WebsitePage activePage={this.state.pages.coreCorrectHealth}/>
-        <WebsitePage activePage={this.state.pages.linuxMint}/>
-        <WebsitePage activePage={this.state.pages.typhon}/>
-        <WebsitePage activePage={this.state.pages.pomodoroClock}/>
-        <WebsitePage activePage={this.state.pages.weatherCards}/>
-        <WebsitePage activePage={this.state.pages.calculator}/>
-        <WebsitePage activePage={this.state.pages.coreCorrectHealth}/>
+        <WebsitePage activePage={this.state.pages.coreCorrectHealth} />
+        <WebsitePage activePage={this.state.pages.coreCorrectHealth} />
+        <WebsitePage activePage={this.state.pages.linuxMint} />
+        <WebsitePage activePage={this.state.pages.typhon} />
+        <WebsitePage activePage={this.state.pages.pomodoroClock} />
+        <WebsitePage activePage={this.state.pages.weatherCards} />
+        <WebsitePage activePage={this.state.pages.calculator} />
+        <ContactForm />
         <Footer />
         <button className="contact-button">CONTACT ME</button>
       </div>
@@ -135,7 +136,6 @@ class NavigationMenu extends App {
               <li className="list-link">Calculator</li>
             </ul>
           </li>
-
         </ul>
       </nav>
     );
@@ -146,27 +146,41 @@ class WebsitePage extends App {
   render() {
     return (
       <div className="page-container">
-      <h1 className="section-title">{this.props.activePage.title}</h1>
-      <div className="image-container" data-simplebar>
-        <img className="web-image" src={this.props.activePage.media} alt="" />
-      </div>
-      <div className="description-container">
-        <h3>LANGUAGES, FRAMEWORKS AND LIBRARIES</h3>
-        <div className="logos-container">
-        {this.props.activePage.libraries.map( (logo,index) => <img src={logo} alt="" className="logo-image" key={`logo ${index}`}/> )}
+        <h1 className="section-title">{this.props.activePage.title}</h1>
+        <div className="image-container" data-simplebar>
+          <img className="web-image" src={this.props.activePage.media} alt="" />
         </div>
-        <p className="web-description">{this.props.activePage.description}
-        </p>
-        <h3>LINKS</h3>
-        <div className="logos-container">
-          <a href={this.props.activePage.pageLink} target="_blank" rel="noopener noreferrer">
-            <img src={screenLogo} alt="" className="logo-image code-link" />
-          </a>
-          <a href={this.props.activePage.githubLink} target="_blank" rel="noopener noreferrer">
-            <img src={githubLogo} alt="" className="logo-image code-link" />
-          </a>
+        <div className="description-container">
+          <h3>LANGUAGES, FRAMEWORKS AND LIBRARIES</h3>
+          <div className="logos-container">
+            {this.props.activePage.libraries.map((logo, index) => (
+              <img
+                src={logo}
+                alt=""
+                className="logo-image"
+                key={`logo ${index}`}
+              />
+            ))}
+          </div>
+          <p className="web-description">{this.props.activePage.description}</p>
+          <h3>LINKS</h3>
+          <div className="logos-container">
+            <a
+              href={this.props.activePage.pageLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={screenLogo} alt="" className="logo-image code-link" />
+            </a>
+            <a
+              href={this.props.activePage.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={githubLogo} alt="" className="logo-image code-link" />
+            </a>
+          </div>
         </div>
-      </div>
       </div>
     );
   }
@@ -187,17 +201,107 @@ const Footer = () => (
       </a>
     </div>
     <div>
-      <a href="https://www.google.com/">
+      <a href="https://github.com/MarioLema/">
         <img src={githubLogo} alt="" className="footer-logo" />
       </a>
-      <a href="https://www.google.com/">
+      <a href="https://codepen.io/Ubim28/">
         <img src={codepenLogo} alt="" className="footer-logo" />
       </a>
-      <a href="https://www.google.com/">
+      <a href="https://www.linkedin.com/in/mario-lema-221036a3/">
         <img src={linkedinLogo} alt="" className="footer-logo" />
       </a>
     </div>
   </footer>
+);
+/*=========================ABOUT ME SECTION============================================= */
+
+/*=========================FORM============================================= */
+const ContactForm = () => (
+  <div className="form-container">
+    <form
+      className="contact-form"
+      action="https://formspree.io/lema_mario@yahoo.com"
+      method="POST"
+      id="form"
+    >
+      <div className="form-group" id="name-field">
+        <label className="control-label" htmlFor="nameinput">
+          Name
+          <br />
+        </label>
+        <input
+          id="nameinput"
+          name="nameinput"
+          className="form-control input-md"
+          type="text"
+          placeholder="Name"
+          required
+        />
+      </div>
+
+      <div className="form-group" id="phone-field">
+        <label className=" control-label" htmlFor="phoneinput">
+          Phone Number
+          <br />
+        </label>
+        <div>
+          <input
+            id="phoneinput"
+            name="phoneinput"
+            className="form-control input-md"
+            type="tel"
+            placeholder="Phone number"
+          />
+        </div>
+      </div>
+
+      <div className="form-group" id="email-field">
+        <label className=" control-label" htmlFor="emailinput">
+          Email Address
+          <br />
+        </label>
+        <input
+          id="emailinput"
+          name="emailinput"
+          className="form-control input-md"
+          type="email"
+          placeholder="Email address"
+          required
+        />
+      </div>
+
+      <div className="form-group" id="message-field">
+        <label className=" control-label" htmlFor="textarea">
+          Message
+        </label>
+        <div>
+          <textarea
+            rows="8"
+            cols="50"
+            className="form-control"
+            id="textarea"
+            name="textarea"
+            type="text"
+            placeholder="Your message..."
+            required
+          />
+        </div>
+      </div>
+
+      <div className="form-group" id="submit-button">
+        <div>
+          <button className="submit-button" name="button1id">
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </form>
+    <div>
+    <a href="https://github.com/MarioLema/">GITHUB</a>
+      <a href="https://codepen.io/Ubim28/">CODEPEN</a>
+      <a href="https://www.linkedin.com/in/mario-lema-221036a3/">LINKEDIN</a>
+    </div>
+  </div>
 );
 
 export default App;
