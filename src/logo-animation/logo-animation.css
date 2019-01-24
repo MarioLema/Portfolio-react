@@ -1,0 +1,20 @@
+.animation-container {
+	background: rgba(0,0,0,0.7);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+.svg-object{
+    max-width:70%;
+}
+/* #letter1 {
+    animation: hideshow 10s ease infinite;
+  }
+@keyframes hideshow {
+    0% { transform: translateX(150%) }
+    10% { transform: translateX(15%) }
+    15% { transform: translateX(10%) }
+    100% { transform: translateX(0%) }
+  }  */

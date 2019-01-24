@@ -16,6 +16,7 @@ import linuxMintImage from "./images/linux-mint.jpg";
 import PomodoroImage from "./images/pomodoro-timer.jpg";
 import typhonImage from "./images/typhon.jpg";
 import weatherCardsImage from "./images/weather-cards.jpg";
+import aboutImage from "./images/portrait-drawing.svg"
 import "simplebar";
 import "simplebar/dist/simplebar.min.css";
 import "./App.css";
@@ -92,7 +93,7 @@ class App extends Component {
           <img src={logoSub} id="logo-image" alt="" />
         </div>
         <NavigationMenu />
-        <WebsitePage activePage={this.state.pages.coreCorrectHealth} />
+        <AboutMe />
         <WebsitePage activePage={this.state.pages.coreCorrectHealth} />
         <WebsitePage activePage={this.state.pages.linuxMint} />
         <WebsitePage activePage={this.state.pages.typhon} />
@@ -114,28 +115,13 @@ class NavigationMenu extends App {
     return (
       <nav>
         <ul className="menu-list">
-          <li className="list-link">Who am I</li>
-          <li>
-            Live Websites
-            <ul>
-              <li className="list-link">Core Correct Health</li>
-            </ul>
-          </li>
-          <li>
-            Mock websites
-            <ul>
-              <li className="list-link">Linux Mint</li>
-              <li className="list-link">Typhon</li>
-            </ul>
-          </li>
-          <li>
-            Widgets
-            <ul>
-              <li className="list-link">Pomodoro Clock</li>
-              <li className="list-link">Weather Cards</li>
-              <li className="list-link">Calculator</li>
-            </ul>
-          </li>
+          <li className="list-link">Core Correct Health</li>
+          <li className="list-link">Linux Mint</li>
+          <li className="list-link">Typhon</li>
+          <li className="list-link">Pomodoro Clock</li>
+          <li className="list-link">Weather Cards</li>
+          <li className="list-link">Calculator</li>
+          <li className="list-link">Portfolio</li>
         </ul>
       </nav>
     );
@@ -200,30 +186,27 @@ const Footer = () => (
         />
       </a>
     </div>
-    <div>
-      <a href="https://github.com/MarioLema/">
-        <img src={githubLogo} alt="" className="footer-logo" />
-      </a>
-      <a href="https://codepen.io/Ubim28/">
-        <img src={codepenLogo} alt="" className="footer-logo" />
-      </a>
-      <a href="https://www.linkedin.com/in/mario-lema-221036a3/">
-        <img src={linkedinLogo} alt="" className="footer-logo" />
-      </a>
-    </div>
   </footer>
 );
 /*=========================ABOUT ME SECTION============================================= */
-
+const AboutMe = () => (
+  <div className="about-me">
+  <img src={aboutImage} alt="" className="about-image" />
+  <div className="about-text-container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.</p>
+  </div>
+  </div>
+)
 /*=========================FORM============================================= */
 const ContactForm = () => (
-  <div className="form-container">
+  <div className="contact-container">
     <form
       className="contact-form"
       action="https://formspree.io/lema_mario@yahoo.com"
       method="POST"
       id="form"
     >
+      <h2>CONTACT ME</h2>
       <div className="form-group" id="name-field">
         <label className="control-label" htmlFor="nameinput">
           Name
@@ -283,7 +266,6 @@ const ContactForm = () => (
             name="textarea"
             type="text"
             placeholder="Your message..."
-            required
           />
         </div>
       </div>
@@ -296,10 +278,32 @@ const ContactForm = () => (
         </div>
       </div>
     </form>
-    <div>
-    <a href="https://github.com/MarioLema/">GITHUB</a>
-      <a href="https://codepen.io/Ubim28/">CODEPEN</a>
-      <a href="https://www.linkedin.com/in/mario-lema-221036a3/">LINKEDIN</a>
+    <div className="social-container">
+    <h2>MY SOCIAL PROFILES</h2>
+      <a
+        className="social-link"
+        href="https://github.com/MarioLema/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={githubLogo} alt="" className="footer-logo" /> GITHUB
+      </a>
+      <a
+        className="social-link"
+        href="https://codepen.io/Ubim28/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={codepenLogo} alt="" className="footer-logo" /> CODEPEN
+      </a>
+      <a
+        className="social-link"
+        href="https://www.linkedin.com/in/mario-lema-221036a3/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={linkedinLogo} alt="" className="footer-logo" /> LINKEDIN
+      </a>
     </div>
   </div>
 );
