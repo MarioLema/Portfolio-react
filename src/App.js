@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Animation from './animation';
 import logoSub from "./images/logo-with-sub.svg";
 import htmlLogo from "./images/html-logo.png";
 import cssLogo from "./images/css-logo.png";
@@ -89,6 +90,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <Animation />
         <div id="page-header">
           <img src={logoSub} id="logo-image" alt="" />
         </div>

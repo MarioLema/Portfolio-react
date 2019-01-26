@@ -1,18 +1,49 @@
 /*=============================CONTAINER PROPERTIES=========================================*/
 .animation-container {
-	background: rgba(0,0,0,0.7);
+	background: rgb(0, 70, 84);
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
+	position: fixed;
+    z-index: 100;
+}
+.remove-box-animation{
+    animation-duration: 2000ms;
+animation-timing-function: ease;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
+    animation-name: removeBox;
+}
+.remove-box{
+    display:none;
 }
 .svg-container{
-    max-width:70%;
+    max-width:80%;
 }
 .svg-object {
     max-width: 100%;
     height: auto;
+}
+#rect977 {
+	fill: #004654;
+}
+#rect977-4 {
+	fill: none;
+	stroke: #ffffff;
+	stroke-opacity: 0.5;
+}
+#sub-header-text > tspan {
+	fill-opacity: 0.84186048;
+}
+.disable-button {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 2em;
+	height: 3em;
+    animation-delay: 5000ms;
 }
 /*=============================COMMON CLASSES=========================================*/
 .animated-item{
@@ -75,8 +106,13 @@ animation-name: toPositionDiag;
 #letter9{
     animation-delay: 8000ms;
 }
-#sub-header-text{
-    animation-delay: 16000ms;
+#sub-header-text {
+	animation-delay: 16000ms;
+	font-weight: bold;
+	font-size: 1.4rem;
+	line-height: 125%;
+    font-family: Rockwell;
+    font-family: 'Nixie One', cursive;
 }
 /*=============================marking rules=========================================*/
 #rule0up{
@@ -192,9 +228,31 @@ animation-name: toPositionDiag;
 
 #l3c1{
     animation-delay: 15200ms;
+        fill: none;
+        fill-opacity: 1;
+        fill-rule: evenodd;
+        stroke: #ffffff;
+        stroke-width: 0.2809875;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        stroke-dasharray: none;
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
 }
 #l3c2{
     animation-delay: 15200ms;
+        fill: none;
+        fill-opacity: 1;
+        fill-rule: evenodd;
+        stroke: #ffffff;
+        stroke-width: 0.2809875;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        stroke-dasharray: none;
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
 }
 
 /*=============================letter4 rules=========================================*/
@@ -243,10 +301,32 @@ animation-name: toPositionDiag;
 
 #l5c1{
     animation-delay: 14600ms;
+        fill: none;
+        fill-opacity: 1;
+        fill-rule: evenodd;
+        stroke: #ffffec;
+        stroke-width: 0.2809875;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        stroke-dasharray: none;
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
 }
 
 #l5c2{
     animation-delay: 14600ms;
+        fill: none;
+        fill-opacity: 1;
+        fill-rule: evenodd;
+        stroke: #ffffff;
+        stroke-width: 0.28835812;
+        stroke-linecap: butt;
+        stroke-linejoin: miter;
+        stroke-miterlimit: 4;
+        stroke-dasharray: none;
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
 }
 
 /*=============================letter6 rules=========================================*/
@@ -381,4 +461,7 @@ animation-name: toPositionDiag;
   }
   @keyframes toPositionDiag {
     100% { transform: translate(0%, 0%) }
+  }
+  @keyframes removeBox {
+    100% { opacity: 0; }
   }
