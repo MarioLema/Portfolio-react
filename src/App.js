@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Animation from './animation';
+import Animation from "./animation";
 import logoSub from "./images/logo-with-sub.svg";
 import htmlLogo from "./images/html-logo.png";
 import cssLogo from "./images/css-logo.png";
@@ -17,26 +17,26 @@ import linuxMintImage from "./images/linux-mint.jpg";
 import PomodoroImage from "./images/pomodoro-timer.jpg";
 import typhonImage from "./images/typhon.jpg";
 import weatherCardsImage from "./images/weather-cards.jpg";
-import aboutImage from "./images/portrait-drawing.svg"
+import aboutImage from "./images/portrait-drawing.svg";
 import "simplebar";
 import "simplebar/dist/simplebar.min.css";
 import "./App.css";
+
+const HIDDEN = { display: "none" };
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pages: {
-        intro: {
-          title: "hello"
-        },
         pomodoroClock: {
           title: "POMODORO TIMER",
           media: PomodoroImage,
           libraries: [htmlLogo, cssLogo, jsLogo, reactLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/pomodoro-app"
+          githubLink: "https://github.com/MarioLema/pomodoro-app",
+          display: HIDDEN
         },
         weatherCards: {
           title: "WEATHER CARDS",
@@ -44,7 +44,8 @@ class App extends Component {
           libraries: [htmlLogo, cssLogo, jsLogo, reactLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/mars-react"
+          githubLink: "https://github.com/MarioLema/mars-react",
+          display: HIDDEN
         },
         calculator: {
           title: "CALCULATOR",
@@ -52,7 +53,8 @@ class App extends Component {
           libraries: [htmlLogo, cssLogo, jsLogo, reactLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/react-calculator"
+          githubLink: "https://github.com/MarioLema/react-calculator",
+          display: HIDDEN
         },
         linuxMint: {
           title: "LINUX MINT",
@@ -60,7 +62,8 @@ class App extends Component {
           libraries: [htmlLogo, cssLogo, jsLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/Linux-mint"
+          githubLink: "https://github.com/MarioLema/Linux-mint",
+          display: HIDDEN
         },
         typhon: {
           title: "TYPHON",
@@ -68,7 +71,8 @@ class App extends Component {
           libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
           description: "text",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/Typhon"
+          githubLink: "https://github.com/MarioLema/Typhon",
+          display: HIDDEN
         },
         coreCorrectHealth: {
           title: "CORE CORRECT HEALTH",
@@ -77,34 +81,171 @@ class App extends Component {
           description:
             " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
           pageLink: "",
-          githubLink: "https://github.com/MarioLema/core-correct"
+          githubLink: "https://github.com/MarioLema/core-correct",
+          display: HIDDEN
+        },
+        portfolio: {
+          title: "portfolio page to be finished",
+          media: coreCorrectImage,
+          libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
+          description:
+            " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
+          pageLink: "",
+          githubLink: "https://github.com/MarioLema/core-correct",
+          display: HIDDEN
+        },
+        intro: {
+          display: {}
         },
         contact: {
-          title: "hello"
+          display: HIDDEN
         }
-      },
-      display: 0,
-      newName: "hellopp"
+      }
     };
+    this.changeDisplay = this.changeDisplay.bind(this);
   }
+
+  changeDisplay(event, page) {
+    let newState = { ...this.state };
+    switch (page) {
+      case "intro":
+        newState.pages.intro = {};
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "contact":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = {};
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "coreCorrect":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = {};
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "linuxMint":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = {};
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "typhon":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = {};
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "pomodoro":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = {};
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "weatherCards":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = {};
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "calculator":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = {};
+        newState.pages.portfolio = HIDDEN;
+        break;
+      case "portfolio":
+        newState.pages.intro = HIDDEN;
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = {};
+        break;
+      default:
+        newState.pages.intro = {};
+        newState.pages.contact = HIDDEN;
+        newState.pages.coreCorrectHealth = HIDDEN;
+        newState.pages.linuxMint = HIDDEN;
+        newState.pages.typhon = HIDDEN;
+        newState.pages.pomodoroClock = HIDDEN;
+        newState.pages.weatherCards = HIDDEN;
+        newState.pages.calculator = HIDDEN;
+        newState.pages.portfolio = HIDDEN;
+    }
+    this.setState( () =>  newState);
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div className="App">
-      <Animation />
+        <Animation />
         <div id="page-header">
           <img src={logoSub} id="logo-image" alt="" />
         </div>
         <NavigationMenu />
-        <AboutMe />
+        <AboutMe activePage={this.state.pages.intro} />
         <WebsitePage activePage={this.state.pages.coreCorrectHealth} />
         <WebsitePage activePage={this.state.pages.linuxMint} />
         <WebsitePage activePage={this.state.pages.typhon} />
         <WebsitePage activePage={this.state.pages.pomodoroClock} />
         <WebsitePage activePage={this.state.pages.weatherCards} />
         <WebsitePage activePage={this.state.pages.calculator} />
-        <ContactForm />
+        <WebsitePage activePage={this.state.pages.portfolio} />
+        <ContactForm activePage={this.state.pages.contact} />
         <Footer />
-        <button className="contact-button">CONTACT ME</button>
+        <button
+          className="contact-button"
+          onClick={event => this.changeDisplay(event, "contact")}
+        >
+          CONTACT ME
+        </button>
       </div>
     );
   }
@@ -117,13 +258,48 @@ class NavigationMenu extends App {
     return (
       <nav>
         <ul className="menu-list">
-          <li className="list-link">Core Correct Health</li>
-          <li className="list-link">Linux Mint</li>
-          <li className="list-link">Typhon</li>
-          <li className="list-link">Pomodoro Clock</li>
-          <li className="list-link">Weather Cards</li>
-          <li className="list-link">Calculator</li>
-          <li className="list-link">Portfolio</li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "coreCorrect")}
+          >
+            Core Correct Health
+          </li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "linuxMint")}
+          >
+            Linux Mint
+          </li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "typhon")}
+          >
+            Typhon
+          </li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "pomodoro")}
+          >
+            Pomodoro Clock
+          </li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "weatherCards")}
+          >
+            Weather Cards
+          </li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "calculator")}
+          >
+            Calculator
+          </li>
+          <li
+            className="list-link"
+            onClick={event => this.changeDisplay(event, "portfolio")}
+          >
+            Portfolio
+          </li>
         </ul>
       </nav>
     );
@@ -133,7 +309,7 @@ class NavigationMenu extends App {
 class WebsitePage extends App {
   render() {
     return (
-      <div className="page-container">
+      <div className="page-container" style={this.props.activePage.display}>
         <h1 className="section-title">{this.props.activePage.title}</h1>
         <div className="image-container" data-simplebar>
           <img className="web-image" src={this.props.activePage.media} alt="" />
@@ -191,123 +367,142 @@ const Footer = () => (
   </footer>
 );
 /*=========================ABOUT ME SECTION============================================= */
-const AboutMe = () => (
-  <div className="about-me">
-  <img src={aboutImage} alt="" className="about-image" />
-  <div className="about-text-container">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.</p>
-  </div>
-  </div>
-)
+class AboutMe extends App {
+  render() {
+    return (
+      <div className="about-me" style={this.props.activePage.display}>
+        <img src={aboutImage} alt="" className="about-image" />
+        <div className="about-text-container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            luctus justo in urna condimentum condimentum. Nunc non metus erat.
+            Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id
+            vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum
+            nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed
+            dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum
+            rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam,
+            tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas
+            vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac
+            finibus libero nulla vitae justo.
+          </p>
+        </div>
+      </div>
+    );
+  }
+}
 /*=========================FORM============================================= */
-const ContactForm = () => (
-  <div className="contact-container">
-    <form
-      className="contact-form"
-      action="https://formspree.io/lema_mario@yahoo.com"
-      method="POST"
-      id="form"
-    >
-      <h2>CONTACT ME</h2>
-      <div className="form-group" id="name-field">
-        <label className="control-label" htmlFor="nameinput">
-          Name
-          <br />
-        </label>
-        <input
-          id="nameinput"
-          name="nameinput"
-          className="form-control input-md"
-          type="text"
-          placeholder="Name"
-          required
-        />
-      </div>
+class ContactForm extends App {
+  render() {
+    return (
+      <div className="contact-container" style={this.props.activePage.display}>
+        <form
+          className="contact-form"
+          action="https://formspree.io/lema_mario@yahoo.com"
+          method="POST"
+          id="form"
+        >
+          <h2>CONTACT ME</h2>
+          <div className="form-group" id="name-field">
+            <label className="control-label" htmlFor="nameinput">
+              Name
+              <br />
+            </label>
+            <input
+              id="nameinput"
+              name="nameinput"
+              className="form-control input-md"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </div>
 
-      <div className="form-group" id="phone-field">
-        <label className=" control-label" htmlFor="phoneinput">
-          Phone Number
-          <br />
-        </label>
-        <div>
-          <input
-            id="phoneinput"
-            name="phoneinput"
-            className="form-control input-md"
-            type="tel"
-            placeholder="Phone number"
-          />
+          <div className="form-group" id="phone-field">
+            <label className=" control-label" htmlFor="phoneinput">
+              Phone Number
+              <br />
+            </label>
+            <div>
+              <input
+                id="phoneinput"
+                name="phoneinput"
+                className="form-control input-md"
+                type="tel"
+                placeholder="Phone number"
+              />
+            </div>
+          </div>
+
+          <div className="form-group" id="email-field">
+            <label className=" control-label" htmlFor="emailinput">
+              Email Address
+              <br />
+            </label>
+            <input
+              id="emailinput"
+              name="emailinput"
+              className="form-control input-md"
+              type="email"
+              placeholder="Email address"
+              required
+            />
+          </div>
+
+          <div className="form-group" id="message-field">
+            <label className=" control-label" htmlFor="textarea">
+              Message
+            </label>
+            <div>
+              <textarea
+                rows="8"
+                cols="50"
+                className="form-control"
+                id="textarea"
+                name="textarea"
+                type="text"
+                placeholder="Your message..."
+              />
+            </div>
+          </div>
+
+          <div className="form-group" id="submit-button">
+            <div>
+              <button className="submit-button" name="button1id">
+                SUBMIT
+              </button>
+            </div>
+          </div>
+        </form>
+        <div className="social-container">
+          <h2>MY SOCIAL PROFILES</h2>
+          <a
+            className="social-link"
+            href="https://github.com/MarioLema/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={githubLogo} alt="" className="footer-logo" /> GITHUB
+          </a>
+          <a
+            className="social-link"
+            href="https://codepen.io/Ubim28/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={codepenLogo} alt="" className="footer-logo" /> CODEPEN
+          </a>
+          <a
+            className="social-link"
+            href="https://www.linkedin.com/in/mario-lema-221036a3/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedinLogo} alt="" className="footer-logo" /> LINKEDIN
+          </a>
         </div>
       </div>
-
-      <div className="form-group" id="email-field">
-        <label className=" control-label" htmlFor="emailinput">
-          Email Address
-          <br />
-        </label>
-        <input
-          id="emailinput"
-          name="emailinput"
-          className="form-control input-md"
-          type="email"
-          placeholder="Email address"
-          required
-        />
-      </div>
-
-      <div className="form-group" id="message-field">
-        <label className=" control-label" htmlFor="textarea">
-          Message
-        </label>
-        <div>
-          <textarea
-            rows="8"
-            cols="50"
-            className="form-control"
-            id="textarea"
-            name="textarea"
-            type="text"
-            placeholder="Your message..."
-          />
-        </div>
-      </div>
-
-      <div className="form-group" id="submit-button">
-        <div>
-          <button className="submit-button" name="button1id">
-            SUBMIT
-          </button>
-        </div>
-      </div>
-    </form>
-    <div className="social-container">
-    <h2>MY SOCIAL PROFILES</h2>
-      <a
-        className="social-link"
-        href="https://github.com/MarioLema/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={githubLogo} alt="" className="footer-logo" /> GITHUB
-      </a>
-      <a
-        className="social-link"
-        href="https://codepen.io/Ubim28/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={codepenLogo} alt="" className="footer-logo" /> CODEPEN
-      </a>
-      <a
-        className="social-link"
-        href="https://www.linkedin.com/in/mario-lema-221036a3/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={linkedinLogo} alt="" className="footer-logo" /> LINKEDIN
-      </a>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export default App;
