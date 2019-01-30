@@ -36,7 +36,6 @@ class App extends Component {
           description: "text",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/pomodoro-app",
-          display: HIDDEN
         },
         weatherCards: {
           title: "WEATHER CARDS",
@@ -45,7 +44,6 @@ class App extends Component {
           description: "text",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/mars-react",
-          display: HIDDEN
         },
         calculator: {
           title: "CALCULATOR",
@@ -54,7 +52,6 @@ class App extends Component {
           description: "text",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/react-calculator",
-          display: HIDDEN
         },
         linuxMint: {
           title: "LINUX MINT",
@@ -63,7 +60,6 @@ class App extends Component {
           description: "text",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/Linux-mint",
-          display: HIDDEN
         },
         typhon: {
           title: "TYPHON",
@@ -72,7 +68,6 @@ class App extends Component {
           description: "text",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/Typhon",
-          display: HIDDEN
         },
         coreCorrectHealth: {
           title: "CORE CORRECT HEALTH",
@@ -82,7 +77,6 @@ class App extends Component {
             " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/core-correct",
-          display: HIDDEN
         },
         portfolio: {
           title: "portfolio page to be finished",
@@ -92,14 +86,18 @@ class App extends Component {
             " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus justo in urna condimentum condimentum. Nunc non metus erat. Vivamus a massa nibh. Aliquam tempus tempus posuere. Maecenas id vulputate augue. Proin vitae nisi ligula. Maecenas sit amet bibendum nibh. Curabitur non fermentum turpis. Praesent et varius nibh, sed dignissim ex.Nulla luctus id est sit amet commodo. Maecenas dictum rhoncus justo, quis ultrices nisi fermentum id. Fusce velit diam, tincidunt in vestibulum vehicula, pretium malesuada purus. Maecenas vehicula, nisi nec feugiat posuere, dolor sem elementum orci, ac finibus libero nulla vitae justo.",
           pageLink: "",
           githubLink: "https://github.com/MarioLema/core-correct",
-          display: HIDDEN
-        },
-        intro: {
-          display: {}
-        },
-        contact: {
-          display: HIDDEN
         }
+      },
+      display: {
+        intro: {},
+        contact: HIDDEN,
+        coreCorrectHealth: HIDDEN,
+        linuxMint: HIDDEN,
+        typhon: HIDDEN,
+        pomodoroClock: HIDDEN,
+        weatherCards: HIDDEN,
+        calculator: HIDDEN,
+        portfolio: HIDDEN,
       }
     };
     this.changeDisplay = this.changeDisplay.bind(this);
@@ -109,118 +107,118 @@ class App extends Component {
     let newState = { ...this.state };
     switch (page) {
       case "intro":
-        newState.pages.intro = {};
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = {};
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "contact":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = {};
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = {};
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "coreCorrect":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = {};
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = {};
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "linuxMint":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = {};
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = {};
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "typhon":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = {};
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = {};
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "pomodoro":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = {};
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = {};
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "weatherCards":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = {};
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = {};
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
         break;
       case "calculator":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = {};
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = {};
+        newState.display.portfolio = HIDDEN;
         break;
       case "portfolio":
-        newState.pages.intro = HIDDEN;
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = {};
+        newState.display.intro = HIDDEN;
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = {};
         break;
       default:
-        newState.pages.intro = {};
-        newState.pages.contact = HIDDEN;
-        newState.pages.coreCorrectHealth = HIDDEN;
-        newState.pages.linuxMint = HIDDEN;
-        newState.pages.typhon = HIDDEN;
-        newState.pages.pomodoroClock = HIDDEN;
-        newState.pages.weatherCards = HIDDEN;
-        newState.pages.calculator = HIDDEN;
-        newState.pages.portfolio = HIDDEN;
+        newState.display.intro = {};
+        newState.display.contact = HIDDEN;
+        newState.display.coreCorrectHealth = HIDDEN;
+        newState.display.linuxMint = HIDDEN;
+        newState.display.typhon = HIDDEN;
+        newState.display.pomodoroClock = HIDDEN;
+        newState.display.weatherCards = HIDDEN;
+        newState.display.calculator = HIDDEN;
+        newState.display.portfolio = HIDDEN;
     }
-    this.setState( () =>  newState);
-    console.log(this.state);
+    this.setState(() => newState);
   }
+
 
   render() {
     return (
@@ -229,16 +227,16 @@ class App extends Component {
         <div id="page-header">
           <img src={logoSub} id="logo-image" alt="" />
         </div>
-        <NavigationMenu />
-        <AboutMe activePage={this.state.pages.intro} />
-        <WebsitePage activePage={this.state.pages.coreCorrectHealth} />
-        <WebsitePage activePage={this.state.pages.linuxMint} />
-        <WebsitePage activePage={this.state.pages.typhon} />
-        <WebsitePage activePage={this.state.pages.pomodoroClock} />
-        <WebsitePage activePage={this.state.pages.weatherCards} />
-        <WebsitePage activePage={this.state.pages.calculator} />
-        <WebsitePage activePage={this.state.pages.portfolio} />
-        <ContactForm activePage={this.state.pages.contact} />
+        <NavigationMenu changeDisplay={this.changeDisplay}/>
+        <AboutMe activePage={this.state.pages.intro} style={this.state.display.intro}/>
+        <WebsitePage activePage={this.state.pages.coreCorrectHealth} style={this.state.display.coreCorrectHealth}/>
+        <WebsitePage activePage={this.state.pages.linuxMint} style={this.state.display.linuxMint}/>
+        <WebsitePage activePage={this.state.pages.typhon} style={this.state.display.typhon}/>
+        <WebsitePage activePage={this.state.pages.pomodoroClock} style={this.state.display.pomodoroClock}/>
+        <WebsitePage activePage={this.state.pages.weatherCards} style={this.state.display.weatherCards}/>
+        <WebsitePage activePage={this.state.pages.calculator} style={this.state.display.calculator}/>
+        <WebsitePage activePage={this.state.pages.portfolio} style={this.state.display.portfolio}/>
+        <ContactForm activePage={this.state.pages.contact} style={this.state.display.contact}/>
         <Footer />
         <button
           className="contact-button"
@@ -258,45 +256,51 @@ class NavigationMenu extends App {
     return (
       <nav>
         <ul className="menu-list">
+        <li
+            className="list-link"
+            onClick={event => this.props.changeDisplay(event, "intro")}
+          >
+              who am I
+          </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "coreCorrect")}
+            onClick={event => this.props.changeDisplay(event, "coreCorrect")}
           >
             Core Correct Health
           </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "linuxMint")}
+            onClick={event => this.props.changeDisplay(event, "linuxMint")}
           >
             Linux Mint
           </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "typhon")}
+            onClick={event => this.props.changeDisplay(event, "typhon")}
           >
             Typhon
           </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "pomodoro")}
+            onClick={event => this.props.changeDisplay(event, "pomodoro")}
           >
             Pomodoro Clock
           </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "weatherCards")}
+            onClick={event => this.props.changeDisplay(event, "weatherCards")}
           >
             Weather Cards
           </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "calculator")}
+            onClick={event => this.props.changeDisplay(event, "calculator")}
           >
             Calculator
           </li>
           <li
             className="list-link"
-            onClick={event => this.changeDisplay(event, "portfolio")}
+            onClick={event => this.props.changeDisplay(event, "portfolio")}
           >
             Portfolio
           </li>
@@ -309,7 +313,7 @@ class NavigationMenu extends App {
 class WebsitePage extends App {
   render() {
     return (
-      <div className="page-container" style={this.props.activePage.display}>
+      <div className="page-container" style={this.props.style}>
         <h1 className="section-title">{this.props.activePage.title}</h1>
         <div className="image-container" data-simplebar>
           <img className="web-image" src={this.props.activePage.media} alt="" />
@@ -370,7 +374,7 @@ const Footer = () => (
 class AboutMe extends App {
   render() {
     return (
-      <div className="about-me" style={this.props.activePage.display}>
+      <div className="about-me" style={this.props.style}>
         <img src={aboutImage} alt="" className="about-image" />
         <div className="about-text-container">
           <p>
@@ -394,7 +398,7 @@ class AboutMe extends App {
 class ContactForm extends App {
   render() {
     return (
-      <div className="contact-container" style={this.props.activePage.display}>
+      <div className="contact-container" style={this.props.style}>
         <form
           className="contact-form"
           action="https://formspree.io/lema_mario@yahoo.com"
