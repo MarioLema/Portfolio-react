@@ -3,12 +3,26 @@ import disableButton from "./images/disable-animation.svg"
 import "./animation.css";
 
 class Animation extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: this.props.display
+    }
+    this.stopAnimation = this.stopAnimation.bind(this);
+  }
+
+  stopAnimation(){
+    let newState = this.state;
+    newState.display = {display: "none"};
+    this.setState(newState);
+  }
+
+
+
+
   render() {
     return (
-      <div className="animation-container remove-box">
+      <div className="animation-container" style={this.state.display} onLoad={() => setTimeout(this.stopAnimation, 20000)}>
         <div className="svg-container">
           <svg
             className="svg-object"
@@ -589,7 +603,7 @@ class Animation extends Component {
             />
           </svg>
         </div>
-        <img className="disable-button animated-item opacity-object" src={disableButton} alt=""/>
+        <img className="disable-button animated-item opacity-object" src={disableButton} alt="" onClick={this.stopAnimation}/>
       </div>
     );
   }

@@ -1,467 +1,479 @@
 /*=============================CONTAINER PROPERTIES=========================================*/
 .animation-container {
-	background: rgb(0, 70, 84);
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-    z-index: 100;
+  background: rgb(0, 70, 84);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
 }
-.remove-box-animation{
-    animation-duration: 2000ms;
-animation-timing-function: ease;
-animation-fill-mode: forwards;
-animation-iteration-count: 1;
-    animation-name: removeBox;
+.hidden-animation{
+    animation-name: removeAnimation;
+  animation-duration: 3000ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
-.remove-box{
-    display:none;
-}
-.svg-container{
-    max-width:80%;
+.svg-container {
+  max-width: 80%;
 }
 .svg-object {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 #rect977 {
-	fill: #004654;
+  fill: #004654;
 }
 #rect977-4 {
-	fill: none;
-	stroke: #ffffff;
-	stroke-opacity: 0.5;
+  fill: none;
+  stroke: #ffffff;
+  stroke-opacity: 0.5;
 }
 #sub-header-text > tspan {
-	fill-opacity: 0.84186048;
+  fill-opacity: 0.84186048;
 }
 .disable-button {
-	position: fixed;
-	top: 0;
-	left: 0;
-	margin: 2em;
-	height: 3em;
-    animation-delay: 5000ms;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 2em;
+  height: 3em;
+  animation-delay: 5000ms;
+  cursor: pointer;
 }
 /*=============================COMMON CLASSES=========================================*/
-.animated-item{
-animation-duration: 3000ms;
-animation-timing-function: ease;
-animation-fill-mode: forwards;
-animation-iteration-count: 1;
-fill: #ffffff;
+.animated-item {
+  animation-duration: 3000ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  fill: #ffffff;
 }
-.opacity-object{
-    opacity: 0;
-    animation-name: revealLetter;
+.opacity-object {
+  opacity: 0;
+  animation-name: revealLetter;
 }
-.vertical-line{
-    animation-name: toPositionVert;
+.vertical-line {
+  animation-name: toPositionVert;
 }
-.horizontal-line{
-animation-name: toPositionHorz;
+.horizontal-line {
+  animation-name: toPositionHorz;
 }
-.diagonal-line{
-animation-name: toPositionDiag;
+.diagonal-line {
+  animation-name: toPositionDiag;
 }
-.top-to-bottom{
-    transform: translateY(100%) rotate(90deg);
+.top-to-bottom {
+  transform: translateY(100%) rotate(90deg);
 }
-.bottom-to-top{
-    transform: translateY(-100%) rotate(90deg);
+.bottom-to-top {
+  transform: translateY(-100%) rotate(90deg);
 }
-.left-to-right{
-    transform: translateX(-100%) scale(-1);
+.left-to-right {
+  transform: translateX(-100%) scale(-1);
 }
-.right-to-left{
-    transform: translateX(100%) scale(-1);
+.right-to-left {
+  transform: translateX(100%) scale(-1);
 }
 /*=============================INDIVIDUAL LETTERS=========================================*/
-#letter1{
-    animation-delay: 12000ms;
+#letter1 {
+  animation-delay: 12000ms;
 }
-#letter2{
-    animation-delay: 9000ms;
+#letter2 {
+  animation-delay: 9000ms;
 }
-#letter3{
-    animation-delay: 13000ms;
+#letter3 {
+  animation-delay: 13000ms;
 }
-#letter4{
-    animation-delay: 7000ms;
+#letter4 {
+  animation-delay: 7000ms;
 }
-#letter5{
-    animation-delay: 11000ms;
+#letter5 {
+  animation-delay: 11000ms;
 }
-#letter6{
-    animation-delay: 6000ms;
+#letter6 {
+  animation-delay: 6000ms;
 }
-#letter7{
-    animation-delay: 14000ms;
+#letter7 {
+  animation-delay: 14000ms;
 }
-#letter8{
-    animation-delay: 10000ms;
+#letter8 {
+  animation-delay: 10000ms;
 }
-#letter9{
-    animation-delay: 8000ms;
+#letter9 {
+  animation-delay: 8000ms;
 }
 #sub-header-text {
-	animation-delay: 16000ms;
-	font-weight: bold;
-	font-size: 1.4rem;
-	line-height: 125%;
-    font-family: Rockwell;
-    font-family: 'Nixie One', cursive;
+  animation-delay: 16000ms;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 125%;
+  font-family: Rockwell;
+  font-family: "Nixie One", cursive;
 }
 /*=============================marking rules=========================================*/
-#rule0up{
-    transform: translateX(-150%);
-    animation-name: ruleToPositionVert;
-    animation-delay: 100ms;
+#rule0up {
+  transform: translateX(-150%);
+  animation-name: ruleToPositionVert;
+  animation-delay: 100ms;
 }
-#rule0down{
-    transform: translateX(150%);
-    animation-name: ruleToPositionVert;
-    animation-delay: 100ms;
+#rule0down {
+  transform: translateX(150%);
+  animation-name: ruleToPositionVert;
+  animation-delay: 100ms;
 }
 /*=============================letter1 rules=========================================*/
-#l1v1{
-    animation-delay: 8100ms;
+#l1v1 {
+  animation-delay: 8100ms;
 }
-#l1v2{
-    animation-delay: 9100ms;
+#l1v2 {
+  animation-delay: 9100ms;
 }
-#l1v3{
-    animation-delay: 1300ms;
-}
-
-#l1v4{
-    animation-delay: 6300ms;
+#l1v3 {
+  animation-delay: 1300ms;
 }
 
-#l1d1{
-    transform: translate(-30%, 62%);
-    animation-delay: 4500ms;
-}
-#l1d2{
-    transform: translate(30%, -62%);
-    animation-delay: 10500ms;
+#l1v4 {
+  animation-delay: 6300ms;
 }
 
-#l1d3{
-    transform: translate(-29%, -65%);
-    animation-delay: 12300ms;
+#l1d1 {
+  transform: translate(-30%, 62%);
+  animation-delay: 4500ms;
+}
+#l1d2 {
+  transform: translate(30%, -62%);
+  animation-delay: 10500ms;
 }
 
-#l1d4{
-    transform: translate(29%, 65%);
-    animation-delay: 2300ms;
+#l1d3 {
+  transform: translate(-29%, -65%);
+  animation-delay: 12300ms;
+}
+
+#l1d4 {
+  transform: translate(29%, 65%);
+  animation-delay: 2300ms;
 }
 
 /*=============================letter2 rules=========================================*/
-#l2h1{
-    animation-delay: 10700ms;
+#l2h1 {
+  animation-delay: 10700ms;
 }
-#l2h2{
-    animation-delay: 2100ms;
-}
-
-#l2d1{
-    transform: translate(15%, -65%);
-    animation-delay: 9300ms;
+#l2h2 {
+  animation-delay: 2100ms;
 }
 
-#l2d2{
-    transform: translate(-15%, 65%);
-    animation-delay: 4700ms;
+#l2d1 {
+  transform: translate(15%, -65%);
+  animation-delay: 9300ms;
 }
 
-#l2d3{
-    transform: translate(-16%, -65%);
-    animation-delay: 10100ms;
+#l2d2 {
+  transform: translate(-15%, 65%);
+  animation-delay: 4700ms;
 }
 
-#l2d4{
-    transform: translate(16%, 65%);
-    animation-delay: 6500ms;
+#l2d3 {
+  transform: translate(-16%, -65%);
+  animation-delay: 10100ms;
+}
+
+#l2d4 {
+  transform: translate(16%, 65%);
+  animation-delay: 6500ms;
 }
 
 /*=============================letter3 rules=========================================*/
-#l3v1{
-    animation-delay: 7300ms;
+#l3v1 {
+  animation-delay: 7300ms;
 }
 
-#l3v2{
-    animation-delay: 12700ms;
+#l3v2 {
+  animation-delay: 12700ms;
 }
 
-#l3v3{
-    animation-delay: 11100ms;
+#l3v3 {
+  animation-delay: 11100ms;
 }
 
-#l3v4{
-    animation-delay: 3300ms;
+#l3v4 {
+  animation-delay: 3300ms;
 }
 
-#l3h1{
-    animation-delay: 8500ms;
+#l3h1 {
+  animation-delay: 8500ms;
 }
 
-#l3h2{
-    animation-delay: 6900ms;
+#l3h2 {
+  animation-delay: 6900ms;
 }
 
-#l3h3{
-    animation-delay: 5100ms;
+#l3h3 {
+  animation-delay: 5100ms;
 }
 
-#l3d1{
-    transform: translate(-22%, -65%);
-    animation-delay: 10300ms;
+#l3d1 {
+  transform: translate(-22%, -65%);
+  animation-delay: 10300ms;
 }
 
-#l3d2{
-    transform: translate(22%, 65%);
-    animation-delay: 1100ms;
+#l3d2 {
+  transform: translate(22%, 65%);
+  animation-delay: 1100ms;
 }
 
-#l3c1{
-    animation-delay: 15200ms;
-        fill: none;
-        fill-opacity: 1;
-        fill-rule: evenodd;
-        stroke: #ffffff;
-        stroke-width: 0.2809875;
-        stroke-linecap: butt;
-        stroke-linejoin: miter;
-        stroke-miterlimit: 4;
-        stroke-dasharray: none;
-        stroke-dashoffset: 0;
-        stroke-opacity: 1;
+#l3c1 {
+  animation-delay: 15200ms;
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: #ffffff;
+  stroke-width: 0.2809875;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
 }
-#l3c2{
-    animation-delay: 15200ms;
-        fill: none;
-        fill-opacity: 1;
-        fill-rule: evenodd;
-        stroke: #ffffff;
-        stroke-width: 0.2809875;
-        stroke-linecap: butt;
-        stroke-linejoin: miter;
-        stroke-miterlimit: 4;
-        stroke-dasharray: none;
-        stroke-dashoffset: 0;
-        stroke-opacity: 1;
+#l3c2 {
+  animation-delay: 15200ms;
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: #ffffff;
+  stroke-width: 0.2809875;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
 }
 
 /*=============================letter4 rules=========================================*/
-#l4v1{
-    animation-delay: 700ms;
+#l4v1 {
+  animation-delay: 700ms;
 }
 
-#l4v2{
-    animation-delay: 8300ms;
+#l4v2 {
+  animation-delay: 8300ms;
 }
 
 /*=============================letter5 rules=========================================*/
-#l5v1{
-    animation-delay: 5900ms;
+#l5v1 {
+  animation-delay: 5900ms;
 }
 
-#l5v2{
-    animation-delay: 9900ms;
+#l5v2 {
+  animation-delay: 9900ms;
 }
 
-#l5v3{
-    animation-delay: 1900ms;
+#l5v3 {
+  animation-delay: 1900ms;
 }
 
-#l5v4{
-    animation-delay: 11700ms;
+#l5v4 {
+  animation-delay: 11700ms;
 }
 
-#l5h1{
-    animation-delay: 5300ms;
+#l5h1 {
+  animation-delay: 5300ms;
 }
 
-#l5h2{
-    animation-delay: 7900ms;
+#l5h2 {
+  animation-delay: 7900ms;
 }
 
-#l5d1{
-    transform: translate(-37%, -65%);
-    animation-delay: 1700ms;
+#l5d1 {
+  transform: translate(-37%, -65%);
+  animation-delay: 1700ms;
 }
 
-#l5d2{
-    transform: translate(-37%, 65%);
-    animation-delay: 12100ms;
+#l5d2 {
+  transform: translate(-37%, 65%);
+  animation-delay: 12100ms;
 }
 
-#l5c1{
-    animation-delay: 14600ms;
-        fill: none;
-        fill-opacity: 1;
-        fill-rule: evenodd;
-        stroke: #ffffec;
-        stroke-width: 0.2809875;
-        stroke-linecap: butt;
-        stroke-linejoin: miter;
-        stroke-miterlimit: 4;
-        stroke-dasharray: none;
-        stroke-dashoffset: 0;
-        stroke-opacity: 1;
+#l5c1 {
+  animation-delay: 14600ms;
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: #ffffec;
+  stroke-width: 0.2809875;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
 }
 
-#l5c2{
-    animation-delay: 14600ms;
-        fill: none;
-        fill-opacity: 1;
-        fill-rule: evenodd;
-        stroke: #ffffff;
-        stroke-width: 0.28835812;
-        stroke-linecap: butt;
-        stroke-linejoin: miter;
-        stroke-miterlimit: 4;
-        stroke-dasharray: none;
-        stroke-dashoffset: 0;
-        stroke-opacity: 1;
+#l5c2 {
+  animation-delay: 14600ms;
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: #ffffff;
+  stroke-width: 0.28835812;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
 }
 
 /*=============================letter6 rules=========================================*/
-#l6v1{
-    animation-delay: 1500ms;
+#l6v1 {
+  animation-delay: 1500ms;
 }
 
-#l6v2{
-    animation-delay: 4300ms;
+#l6v2 {
+  animation-delay: 4300ms;
 }
 
-#l6v3{
-    animation-delay: 6100ms;
+#l6v3 {
+  animation-delay: 6100ms;
 }
 
-#l6h1{
-    animation-delay: 900ms;
+#l6h1 {
+  animation-delay: 900ms;
 }
 
 /*=============================letter7 rules=========================================*/
-#l7v1{
-    animation-delay: 11900ms;
+#l7v1 {
+  animation-delay: 11900ms;
 }
 
-#l7v2{
-    animation-delay: 5500ms;
+#l7v2 {
+  animation-delay: 5500ms;
 }
 
-#l7v3{
-    animation-delay: 11300ms;
+#l7v3 {
+  animation-delay: 11300ms;
 }
 
-#l7v4{
-    animation-delay: 3700ms;
+#l7v4 {
+  animation-delay: 3700ms;
 }
 
-#l7h1{
-    animation-delay: 9700ms;
+#l7h1 {
+  animation-delay: 9700ms;
 }
 
-#l7h2{
-    animation-delay: 12500ms;
+#l7h2 {
+  animation-delay: 12500ms;
 }
 
-#l7h3{
-    animation-delay: 12900ms;
+#l7h3 {
+  animation-delay: 12900ms;
 }
 
-#l7h4{
-    animation-delay: 3900ms;
+#l7h4 {
+  animation-delay: 3900ms;
 }
 
 /*=============================letter8 rules=========================================*/
-#l8v1{
-    animation-delay: 8700ms;
+#l8v1 {
+  animation-delay: 8700ms;
 }
 
-#l8v2{
-    animation-delay: 2500ms;
+#l8v2 {
+  animation-delay: 2500ms;
 }
 
-#l8v3{
-    animation-delay: 6700ms;
+#l8v3 {
+  animation-delay: 6700ms;
 }
 
-#l8v4{
-    animation-delay: 4900ms;
+#l8v4 {
+  animation-delay: 4900ms;
 }
 
-#l8d1{
-    transform: translate(-30%, 62%);
-    animation-delay: 10900ms;
+#l8d1 {
+  transform: translate(-30%, 62%);
+  animation-delay: 10900ms;
 }
 
-#l8d2{
-    transform: translate(30%, -62%);
-    animation-delay: 3500ms;
+#l8d2 {
+  transform: translate(30%, -62%);
+  animation-delay: 3500ms;
 }
 
-#l8d3{
-    transform: translate(-29%, -65%);
-    animation-delay: 11500ms;
+#l8d3 {
+  transform: translate(-29%, -65%);
+  animation-delay: 11500ms;
 }
 
-#l8d4{
-    transform: translate(29%, 65%);
-    animation-delay: 7500ms;
+#l8d4 {
+  transform: translate(29%, 65%);
+  animation-delay: 7500ms;
 }
 
 /*=============================letter9 rules=========================================*/
-#l9h1{
-    animation-delay: 8900ms;
+#l9h1 {
+  animation-delay: 8900ms;
 }
 
-#l9h2{
-    animation-delay: 4100ms;
+#l9h2 {
+  animation-delay: 4100ms;
 }
 
-#l9d1{
-    transform: translate(15%, -65%);
-    animation-delay: 7100ms;
+#l9d1 {
+  transform: translate(15%, -65%);
+  animation-delay: 7100ms;
 }
 
-#l9d2{
-    transform: translate(-15%, 65%);
-    animation-delay: 2700ms;
+#l9d2 {
+  transform: translate(-15%, 65%);
+  animation-delay: 2700ms;
 }
 
-#l9d3{
-    transform: translate(-16%, -65%);
-    animation-delay: 5700ms;
+#l9d3 {
+  transform: translate(-16%, -65%);
+  animation-delay: 5700ms;
 }
 
-#l9d4{
-    transform: translate(16%, 65%);
-    animation-delay: 7700ms;
+#l9d4 {
+  transform: translate(16%, 65%);
+  animation-delay: 7700ms;
 }
-
 
 /*=============================KEYFRAMES=========================================*/
 @keyframes revealLetter {
-    100% { opacity: 1; }
+  100% {
+    opacity: 1;
   }
-  @keyframes ruleToPositionVert {
-    100% { transform: translateX(0%) }
+}
+@keyframes ruleToPositionVert {
+  100% {
+    transform: translateX(0%);
   }
-  @keyframes toPositionVert {
-    100% { transform: translateY(0%) rotate(90deg) }
+}
+@keyframes toPositionVert {
+  100% {
+    transform: translateY(0%) rotate(90deg);
   }
-  @keyframes toPositionHorz {
-    100% { transform: translateX(0%) scale(-1) }
+}
+@keyframes toPositionHorz {
+  100% {
+    transform: translateX(0%) scale(-1);
   }
-  @keyframes toPositionDiag {
-    100% { transform: translate(0%, 0%) }
+}
+@keyframes toPositionDiag {
+  100% {
+    transform: translate(0%, 0%);
   }
-  @keyframes removeBox {
-    100% { opacity: 0; }
+}
+@keyframes removeAnimation {
+  99% {
+    opacity: 0;
   }
+  100% {
+    display: none;
+  }
+}

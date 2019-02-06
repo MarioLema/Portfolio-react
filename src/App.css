@@ -72,9 +72,9 @@ li {
 }
 .section-title {
 	margin: auto;
-	padding: 1em;
-  border-bottom: solid #fff3 1px;
-  grid-column:1/-1;
+	padding: 0.5em;
+	border-bottom: solid #fff3 1px;
+	grid-column: 1/-1;
 }
 .image-container {
 	text-align: center;
@@ -86,11 +86,14 @@ li {
 	max-width: 700px;
 }
 .description-container {
-	padding: 2em;
+	padding: 1em;
 	font-family: "Rajdhani", sans-serif;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+.description-container > h3{
+	line-height: 0.1em;
 }
 footer {
 	display: flex;
@@ -129,9 +132,9 @@ footer > div{
   height: auto;
 }
 .logo-image {
-  padding: 0.5em;
-  height: 3em;
-  opacity: 0.8;
+	padding: 0.5em;
+	height: 2.5em;
+	opacity: 0.8;
 }
 .code-link:hover {
 opacity: 1;
@@ -180,24 +183,36 @@ opacity: 1;
 	grid-template-rows: auto 1fr;
 	border: 1px solid #fff3;
 	margin: 2em;
-	padding: 1em;
+	padding: 1.5em;
+	max-width: 1500px;
+	align-self: center;
+	justify-self: center;
 }
-.web-description::first-letter {
-	font-size: 300%;
-  font-weight: bolder;
-  float: left
+.web-description{
+	font-size: 1.2em;
 }
-
 .contact-container {
 	grid-column: 2/-1;
-	display: flex;
-	align-items: flex-start;
-	font-family: "Abel", sans-serif;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
 	font-size: 1.3em;
-  justify-content: space-evenly;
-  border: 1px solid #fff3;
+	justify-content: space-evenly;
+	border: 1px solid #fff3;
 	margin: 1.5em;
 	padding: 1em;
+}
+.contact-container > h2{
+	grid-row: 1/2;
+	margin: auto;
+	padding: 0.5em;
+	border-bottom: solid #fff3 1px;
+}
+.contact-container > form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 3em;
 }
 .form-group {
 	margin-bottom: 1em;
@@ -226,13 +241,14 @@ opacity: 1;
 }
 .social-container {
 	display: flex;
-  flex-direction: column;
-  align-items: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .social-link {
 	color: white;
 	text-decoration: none;
-	margin: 0.4em;
+	margin: 0.7em;
 	border: solid rgba(255,255,255, 0.2) 1px;
 	padding: 0.4em;
 	text-align: center;
@@ -240,8 +256,8 @@ opacity: 1;
 	align-content: center;
 	justify-content: space-around;
 	align-items: center;
-  width: 8em;
-  transition:all 300ms;
+	width: 8em;
+	transition: all 300ms;
 }
 .social-link:hover {
 	background: rgba(255,255,255, 0.2);
@@ -250,12 +266,23 @@ opacity: 1;
 .about-me {
 	grid-column: 2/-1;
 	margin: 2em;
-	padding: 1em;
+	padding: 1.5em;
+	align-self: center;
+	justify-self: center;
+	max-width: 1000px;
+	border: solid #fff3 1px;
 }
-.about-image{
-  max-height:400px;
+.about-image {
+	float: inline-start;
+	margin: 1em;
+	width: 200px;
+	shape-outside: inset(1% round 37%);
 }
-.about-text-container{
-  font-family: 'Nixie One', cursive;
-  font-size:1.2em;
+.about-text-container {
+	font-family: 'Nixie One', cursive;
+	font-size: 1.2rem;
+	line-height: 1.7em;
+}
+.about-text-container > span{
+	font-size: 1.5em;
 }
