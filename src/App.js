@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Animation from "./animation";
+import NavigationMenu from "./components"
 import logoSub from "./images/logo-with-sub.svg";
 import htmlLogo from "./images/html-logo.png";
 import cssLogo from "./images/css-logo.png";
@@ -14,12 +15,11 @@ import linkedinLogo from "./images/linkedin-logo.svg";
 import coreCorrectImage from "./images/core-correct.jpg";
 import calculatorImage from "./images/calculator.jpg";
 import linuxMintImage from "./images/linux-mint.jpg";
-import PomodoroImage from "./images/pomodoro-timer.jpg";
+import PomodoroImage from "./images/pomodoro.jpg";
 import typhonImage from "./images/typhon.jpg";
+import portfolioImage from "./images/portfolio.jpg"
 import weatherCardsImage from "./images/weather-cards.jpg";
 import aboutImage from "./images/portrait-drawing.svg";
-import "simplebar";
-import "simplebar/dist/simplebar.min.css";
 import "./App.css";
 
 const HIDDEN = { display: "none" };
@@ -96,7 +96,7 @@ class App extends Component {
         },
         portfolio: {
           title: "portfolio page to be finished",
-          media: coreCorrectImage,
+          media: portfolioImage,
           libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
           description:[
             "The portfolio itself has been built with React. It is meant to be a one page fitting the entire browser window and that will change its display upon clicking on the different section handlers.",
@@ -189,73 +189,73 @@ class App extends Component {
   }
 }
 
-/*=========================NAVIGATION MENU============================================= */
+// /*=========================NAVIGATION MENU============================================= */
 
-class NavigationMenu extends App {
-  render() {
-    return (
-      <nav>
-        <ul className="menu-list">
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "intro")}
-          >
-            who am I
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "coreCorrect")}
-          >
-            Core Correct Health
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "linuxMint")}
-          >
-            Linux Mint
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "typhon")}
-          >
-            Typhon
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "pomodoro")}
-          >
-            Pomodoro Clock
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "weatherCards")}
-          >
-            Weather Cards
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "calculator")}
-          >
-            Calculator
-          </li>
-          <li
-            className="list-link"
-            onClick={event => this.props.changeDisplay(event, "portfolio")}
-          >
-            Portfolio
-          </li>
-        </ul>
-      </nav>
-    );
-  }
-}
+// class NavigationMenu extends App {
+//   render() {
+//     return (
+//       <nav>
+//         <ul className="menu-list">
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "intro")}
+//           >
+//             who am I
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "coreCorrect")}
+//           >
+//             Core Correct Health
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "linuxMint")}
+//           >
+//             Linux Mint
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "typhon")}
+//           >
+//             Typhon
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "pomodoro")}
+//           >
+//             Pomodoro Clock
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "weatherCards")}
+//           >
+//             Weather Cards
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "calculator")}
+//           >
+//             Calculator
+//           </li>
+//           <li
+//             className="list-link"
+//             onClick={event => this.props.changeDisplay(event, "portfolio")}
+//           >
+//             Portfolio
+//           </li>
+//         </ul>
+//       </nav>
+//     );
+//   }
+// }
 /*=========================WEBSITE PAGE============================================= */
 class WebsitePage extends App {
   render() {
     return (
       <div className="page-container" style={this.props.style}>
         <h1 className="section-title">{this.props.activePage.title}</h1>
-        <div className="image-container" data-simplebar>
+        <div className="image-container">
           <img className="web-image" src={this.props.activePage.media} alt="" />
         </div>
         <div className="description-container">

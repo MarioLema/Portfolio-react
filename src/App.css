@@ -79,8 +79,6 @@ li {
 .image-container {
 	text-align: center;
 	font-family: "Rajdhani", sans-serif;
-	overflow: auto;
-	max-height: 450px;
 	margin: 1.5em;
 	align-self: center;
 	max-width: 700px;
@@ -125,7 +123,10 @@ footer > div{
   display: block;
 }
 .web-image {
-  width: 100%;
+	width: 100%;
+	border-radius: 10px;
+	max-height: 450px;
+	max-width: 450px;
 }
 .logos-container {
   display: flex;
@@ -275,7 +276,7 @@ opacity: 1;
 .about-image {
 	float: inline-start;
 	margin: 1em;
-	width: 200px;
+	width: 270px;
 	shape-outside: inset(1% round 37%);
 }
 .about-text-container {
