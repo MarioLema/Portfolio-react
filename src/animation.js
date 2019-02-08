@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import disableButton from "./images/disable-animation.svg"
+import disableButton from "./images/disable-animation.svg";
 import "./animation.css";
 
 class Animation extends Component {
@@ -7,22 +7,24 @@ class Animation extends Component {
     super(props);
     this.state = {
       display: this.props.display
-    }
+    };
     this.stopAnimation = this.stopAnimation.bind(this);
   }
 
-  stopAnimation(){
+  //STOPS THE ANIMATION BY CHANGING ITS DISPLAY
+  stopAnimation() {
     let newState = this.state;
-    newState.display = {display: "none"};
+    newState.display = { display: "none" };
     this.setState(newState);
   }
 
-
-
-
   render() {
     return (
-      <div className="animation-container" style={this.state.display} onLoad={() => setTimeout(this.stopAnimation, 20000)}>
+      <div
+        className="animation-container"
+        style={this.state.display}
+        onLoad={() => setTimeout(this.stopAnimation, 22000)}
+      >
         <div className="svg-container">
           <svg
             className="svg-object"
@@ -33,6 +35,7 @@ class Animation extends Component {
             version="1.1"
             id="svg1456"
           >
+            {/* CONTAINING BOX AND VISIBLE ANIMATION AREA */}
             <rect
               id="rect977"
               y="2.8421709e-014"
@@ -40,51 +43,61 @@ class Animation extends Component {
               height="493.42255"
               width="848.72314"
             />
+            {/*FIRST LETTER: M*/}
             <path
               className="animated-item opacity-object"
               id="letter1"
               d="m 198.58803,254.07009 7.2722,0.005 v -34.0151 l 12.47227,17.06317 12.38426,-16.74762 0.0497,33.71709 7.27048,-0.0153 -0.002,-43.69639 -7.27106,0.01 -12.37836,16.64221 -12.37331,-16.63906 -7.40413,-0.0352 z"
             />
+            {/*SECOND LETTER: A*/}
             <path
               className="animated-item opacity-object"
               id="letter2"
               d="m 248.64372,254.06935 8.02579,-0.0117 3.06161,-7.41392 22.14526,0.0165 3.12003,7.40907 8.00824,0.006 -18.21683,-43.65546 -8.02673,-0.0585 4.01787,10.05353 8.07153,19.08238 -16.07275,-0.004 8.00122,-19.07824 -4.01787,-10.05353 z"
             />
+            {/*THIRD LETTER: R*/}
             <path
               className="animated-item opacity-object"
               id="letter3"
               d="m 313.55902,243.30694 0.0288,10.76559 -7.41884,0.14883 0.19395,-43.80428 7.23729,7.25355 -0.0207,18.19944 10.58734,-0.0305 c 4.12693,-0.0119 7.99097,-5.41943 7.80662,-9.51884 -0.18068,-4.01727 -4.4141,-8.5849 -8.45664,-8.60378 l -9.91667,-0.0463 -7.2373,-7.25355 16.99797,-0.0682 c 9.20875,-0.037 15.64668,8.29974 15.82494,15.28916 0.2546,9.98274 -6.97753,14.58317 -6.97753,14.58317 l 7.96679,13.80181 -8.46001,0.0165 -6.25422,-10.71381 z"
             />
+            {/*FOURTH LETTER: I*/}
             <path
               className="animated-item opacity-object"
               id="letter4"
               d="m 353.59615,254.0752 7.30824,0.0234 -0.0585,-43.73146 -7.2907,0.0117 z"
             />
+            {/*FIFTH LETTER: O*/}
             <path
               className="animated-item opacity-object"
               id="letter5"
               d="m 396.75939,210.53578 c -12.0904,0 -21.75105,9.84007 -21.75105,21.9142 0,12.07413 9.76814,21.56061 21.85853,21.56061 12.0904,0 21.57546,-9.75107 21.57546,-21.8252 0,-12.07413 -9.59255,-21.64961 -21.68294,-21.64961 z m 0.14882,6.95567 c 6.86147,-0.14665 14.48555,6.0935 14.5517,14.42109 0.0541,6.80602 -5.25482,14.59425 -14.49724,14.65496 -7.09632,0.0466 -14.50273,-6.16401 -14.67425,-13.53048 -0.13229,-5.68176 3.78801,-15.31406 14.61979,-15.54557 z"
             />
+            {/*SIXTH LETTER: L*/}
             <path
               className="animated-item opacity-object"
               id="letter6"
               d="m 471.31047,210.40868 h 7.29655 l -0.0212,36.3991 18.21233,0.008 -0.008,7.25761 -25.49475,0.0248 z"
             />
+            {/*SEVENTH LETTER: E*/}
             <path
               className="animated-item opacity-object"
               id="letter7"
               d="m 509.74581,254.09274 -0.008,-43.66939 32.89459,-0.0227 0.004,7.26599 -25.63466,0.0146 0.0175,10.91506 h 18.20431 l 0.003,7.28925 -18.19407,-0.0175 -0.0116,10.9399 25.62667,-0.0498 0.0167,7.29958 z"
             />
+            {/*EIGTH LETTER: M*/}
             <path
               className="animated-item opacity-object"
               id="letter8"
               d="m 556.65569,254.07293 7.2649,-0.008 0.0146,-33.9853 12.48997,17.06065 12.38554,-16.75298 0.0175,33.65862 7.2739,0.0359 V 210.3981 l -7.27776,-0.004 -12.38223,16.68858 -12.29239,-16.67715 -7.49218,-0.0319 z"
             />
+            {/*NINTH LETTER: A*/}
             <path
               className="animated-item opacity-object"
               id="letter9"
               d="m 606.67573,254.056 8.04441,0.0289 3.11174,-7.4417 22.07347,-0.0117 3.10912,7.40859 8.06675,0.0351 -18.21651,-43.68285 -8.04606,0.0207 4.04413,9.89862 8.06802,19.22764 -16.1254,-0.0276 8.05738,-19.2 -4.04413,-9.89862 z"
             />
+            {/*BOTTOM RULER*/}
             <rect
               className="animated-item"
               id="rule0down"
@@ -93,6 +106,7 @@ class Animation extends Component {
               height="0.2811197"
               width="461.4859"
             />
+            {/*TOP RULER*/}
             <rect
               className="animated-item"
               id="rule0up"
@@ -101,6 +115,7 @@ class Animation extends Component {
               height="0.2811197"
               width="451.27594"
             />
+            {/*VERTICAL LINES */}
             <rect
               className="animated-item vertical-line top-to-bottom"
               id="l1v1"
@@ -290,6 +305,7 @@ class Animation extends Component {
               height="0.2811197"
               width="64.094147"
             />
+            {/* HORIZONTAL LINES */}
             <rect
               className="animated-item horizontal-line left-to-right"
               id="l2h1"
@@ -398,6 +414,7 @@ class Animation extends Component {
               height="0.2811197"
               width="43.824265"
             />
+            {/* DIAGONAL LINES */}
             <path
               className="animated-item diagonal-line"
               id="l1d1"
@@ -408,6 +425,7 @@ class Animation extends Component {
               id="l1d2"
               d="m 199.9751,261.78141 0.35002,0.13972 40.17977,-54.59947 -0.28004,-0.21024 z"
             />
+            {/* CIRCLES */}
             <circle
               className="animated-item opacity-object"
               id="l3c2"
@@ -429,6 +447,7 @@ class Animation extends Component {
               cy="232.07845"
               cx="396.8436"
             />
+            {/* ------- */}
             <path
               className="animated-item diagonal-line"
               id="l1d4"
@@ -486,6 +505,7 @@ class Animation extends Component {
               cy="232.22404"
               cx="396.71255"
             />
+            {/* LETTER 8 LINES */}
             <rect
               className="animated-item vertical-line top-to-bottom"
               id="l8v1"
@@ -560,6 +580,7 @@ class Animation extends Component {
               id="l8d3"
               d="m 594.43934,261.50132 -0.27978,0.13999 -39.75984,-54.31954 0.28004,-0.21024 z"
             />
+            {/* LETTER 9 LINES */}
             <path
               className="animated-item diagonal-line"
               id="l9d1"
@@ -580,17 +601,14 @@ class Animation extends Component {
               id="l9d3"
               d="m 647.62817,264.58133 -0.35002,0.13999 -26.94982,-64.4697 0.34999,-0.14 z"
             />
+            {/* SUBHEADER TEXT */}
             <text
               className="animated-item opacity-object"
               id="sub-header-text"
               x="424.36887"
               y="288.43716"
             >
-              <tspan
-                id="tspan901"
-                x="465.369"
-                y="288.43716"
-              >
+              <tspan id="tspan901" x="465.369" y="288.43716">
                 Front End Developer
               </tspan>
             </text>
@@ -603,7 +621,13 @@ class Animation extends Component {
             />
           </svg>
         </div>
-        <img className="disable-button animated-item opacity-object" src={disableButton} alt="" onClick={this.stopAnimation}/>
+        {/* BUTTON TO STOP ANIMATION */}
+        <img
+          className="disable-button animated-item opacity-object"
+          src={disableButton}
+          alt=""
+          onClick={this.stopAnimation}
+        />
       </div>
     );
   }

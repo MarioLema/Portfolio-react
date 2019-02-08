@@ -3,18 +3,17 @@
   background: rgb(0, 70, 84);
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   z-index: 100;
-}
-.hidden-animation{
-    animation-name: removeAnimation;
-  animation-duration: 3000ms;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
 }
 .svg-container {
   max-width: 80%;
@@ -40,72 +39,95 @@
   left: 0;
   margin: 2em;
   height: 3em;
-  animation-delay: 5000ms;
+  -webkit-animation-delay: 5000ms;
+          animation-delay: 5000ms;
   cursor: pointer;
 }
 /*=============================COMMON CLASSES=========================================*/
 .animated-item {
-  animation-duration: 3000ms;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   fill: #ffffff;
 }
 .opacity-object {
   opacity: 0;
-  animation-name: revealLetter;
+  -webkit-animation-name: revealLetter;
+          animation-name: revealLetter;
 }
 .vertical-line {
-  animation-name: toPositionVert;
+  -webkit-animation-name: toPositionVert;
+          animation-name: toPositionVert;
 }
 .horizontal-line {
-  animation-name: toPositionHorz;
+  -webkit-animation-name: toPositionHorz;
+          animation-name: toPositionHorz;
 }
 .diagonal-line {
-  animation-name: toPositionDiag;
+  -webkit-animation-name: toPositionDiag;
+          animation-name: toPositionDiag;
 }
 .top-to-bottom {
-  transform: translateY(100%) rotate(90deg);
+  -webkit-transform: translateY(100%) rotate(90deg);
+          transform: translateY(100%) rotate(90deg);
 }
 .bottom-to-top {
-  transform: translateY(-100%) rotate(90deg);
+  -webkit-transform: translateY(-100%) rotate(90deg);
+          transform: translateY(-100%) rotate(90deg);
 }
 .left-to-right {
-  transform: translateX(-100%) scale(-1);
+  -webkit-transform: translateX(-100%) scale(-1);
+          transform: translateX(-100%) scale(-1);
 }
 .right-to-left {
-  transform: translateX(100%) scale(-1);
+  -webkit-transform: translateX(100%) scale(-1);
+          transform: translateX(100%) scale(-1);
 }
 /*=============================INDIVIDUAL LETTERS=========================================*/
 #letter1 {
-  animation-delay: 12000ms;
+  -webkit-animation-delay: 12000ms;
+          animation-delay: 12000ms;
 }
 #letter2 {
-  animation-delay: 9000ms;
+  -webkit-animation-delay: 9000ms;
+          animation-delay: 9000ms;
 }
 #letter3 {
-  animation-delay: 13000ms;
+  -webkit-animation-delay: 13000ms;
+          animation-delay: 13000ms;
 }
 #letter4 {
-  animation-delay: 7000ms;
+  -webkit-animation-delay: 7000ms;
+          animation-delay: 7000ms;
 }
 #letter5 {
-  animation-delay: 11000ms;
+  -webkit-animation-delay: 11000ms;
+          animation-delay: 11000ms;
 }
 #letter6 {
-  animation-delay: 6000ms;
+  -webkit-animation-delay: 6000ms;
+          animation-delay: 6000ms;
 }
 #letter7 {
-  animation-delay: 14000ms;
+  -webkit-animation-delay: 14000ms;
+          animation-delay: 14000ms;
 }
 #letter8 {
-  animation-delay: 10000ms;
+  -webkit-animation-delay: 10000ms;
+          animation-delay: 10000ms;
 }
 #letter9 {
-  animation-delay: 8000ms;
+  -webkit-animation-delay: 8000ms;
+          animation-delay: 8000ms;
 }
 #sub-header-text {
-  animation-delay: 16000ms;
+  -webkit-animation-delay: 16000ms;
+          animation-delay: 16000ms;
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 125%;
@@ -114,118 +136,158 @@
 }
 /*=============================marking rules=========================================*/
 #rule0up {
-  transform: translateX(-150%);
-  animation-name: ruleToPositionVert;
-  animation-delay: 100ms;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-animation-name: ruleToPositionVert;
+          animation-name: ruleToPositionVert;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 #rule0down {
-  transform: translateX(150%);
-  animation-name: ruleToPositionVert;
-  animation-delay: 100ms;
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  -webkit-animation-name: ruleToPositionVert;
+          animation-name: ruleToPositionVert;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 /*=============================letter1 rules=========================================*/
 #l1v1 {
-  animation-delay: 8100ms;
+  -webkit-animation-delay: 8100ms;
+          animation-delay: 8100ms;
 }
 #l1v2 {
-  animation-delay: 9100ms;
+  -webkit-animation-delay: 9100ms;
+          animation-delay: 9100ms;
 }
 #l1v3 {
-  animation-delay: 1300ms;
+  -webkit-animation-delay: 1300ms;
+          animation-delay: 1300ms;
 }
 
 #l1v4 {
-  animation-delay: 6300ms;
+  -webkit-animation-delay: 6300ms;
+          animation-delay: 6300ms;
 }
 
 #l1d1 {
-  transform: translate(-30%, 62%);
-  animation-delay: 4500ms;
+  -webkit-transform: translate(-30%, 62%);
+          transform: translate(-30%, 62%);
+  -webkit-animation-delay: 4500ms;
+          animation-delay: 4500ms;
 }
 #l1d2 {
-  transform: translate(30%, -62%);
-  animation-delay: 10500ms;
+  -webkit-transform: translate(30%, -62%);
+          transform: translate(30%, -62%);
+  -webkit-animation-delay: 10500ms;
+          animation-delay: 10500ms;
 }
 
 #l1d3 {
-  transform: translate(-29%, -65%);
-  animation-delay: 12300ms;
+  -webkit-transform: translate(-29%, -65%);
+          transform: translate(-29%, -65%);
+  -webkit-animation-delay: 12300ms;
+          animation-delay: 12300ms;
 }
 
 #l1d4 {
-  transform: translate(29%, 65%);
-  animation-delay: 2300ms;
+  -webkit-transform: translate(29%, 65%);
+          transform: translate(29%, 65%);
+  -webkit-animation-delay: 2300ms;
+          animation-delay: 2300ms;
 }
 
 /*=============================letter2 rules=========================================*/
 #l2h1 {
-  animation-delay: 10700ms;
+  -webkit-animation-delay: 10700ms;
+          animation-delay: 10700ms;
 }
 #l2h2 {
-  animation-delay: 2100ms;
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
 }
 
 #l2d1 {
-  transform: translate(15%, -65%);
-  animation-delay: 9300ms;
+  -webkit-transform: translate(15%, -65%);
+          transform: translate(15%, -65%);
+  -webkit-animation-delay: 9300ms;
+          animation-delay: 9300ms;
 }
 
 #l2d2 {
-  transform: translate(-15%, 65%);
-  animation-delay: 4700ms;
+  -webkit-transform: translate(-15%, 65%);
+          transform: translate(-15%, 65%);
+  -webkit-animation-delay: 4700ms;
+          animation-delay: 4700ms;
 }
 
 #l2d3 {
-  transform: translate(-16%, -65%);
-  animation-delay: 10100ms;
+  -webkit-transform: translate(-16%, -65%);
+          transform: translate(-16%, -65%);
+  -webkit-animation-delay: 10100ms;
+          animation-delay: 10100ms;
 }
 
 #l2d4 {
-  transform: translate(16%, 65%);
-  animation-delay: 6500ms;
+  -webkit-transform: translate(16%, 65%);
+          transform: translate(16%, 65%);
+  -webkit-animation-delay: 6500ms;
+          animation-delay: 6500ms;
 }
 
 /*=============================letter3 rules=========================================*/
 #l3v1 {
-  animation-delay: 7300ms;
+  -webkit-animation-delay: 7300ms;
+          animation-delay: 7300ms;
 }
 
 #l3v2 {
-  animation-delay: 12700ms;
+  -webkit-animation-delay: 12700ms;
+          animation-delay: 12700ms;
 }
 
 #l3v3 {
-  animation-delay: 11100ms;
+  -webkit-animation-delay: 11100ms;
+          animation-delay: 11100ms;
 }
 
 #l3v4 {
-  animation-delay: 3300ms;
+  -webkit-animation-delay: 3300ms;
+          animation-delay: 3300ms;
 }
 
 #l3h1 {
-  animation-delay: 8500ms;
+  -webkit-animation-delay: 8500ms;
+          animation-delay: 8500ms;
 }
 
 #l3h2 {
-  animation-delay: 6900ms;
+  -webkit-animation-delay: 6900ms;
+          animation-delay: 6900ms;
 }
 
 #l3h3 {
-  animation-delay: 5100ms;
+  -webkit-animation-delay: 5100ms;
+          animation-delay: 5100ms;
 }
 
 #l3d1 {
-  transform: translate(-22%, -65%);
-  animation-delay: 10300ms;
+  -webkit-transform: translate(-22%, -65%);
+          transform: translate(-22%, -65%);
+  -webkit-animation-delay: 10300ms;
+          animation-delay: 10300ms;
 }
 
 #l3d2 {
-  transform: translate(22%, 65%);
-  animation-delay: 1100ms;
+  -webkit-transform: translate(22%, 65%);
+          transform: translate(22%, 65%);
+  -webkit-animation-delay: 1100ms;
+          animation-delay: 1100ms;
 }
 
 #l3c1 {
-  animation-delay: 15200ms;
+  -webkit-animation-delay: 15200ms;
+          animation-delay: 15200ms;
   fill: none;
   fill-opacity: 1;
   fill-rule: evenodd;
@@ -239,7 +301,8 @@
   stroke-opacity: 1;
 }
 #l3c2 {
-  animation-delay: 15200ms;
+  -webkit-animation-delay: 15200ms;
+          animation-delay: 15200ms;
   fill: none;
   fill-opacity: 1;
   fill-rule: evenodd;
@@ -255,50 +318,63 @@
 
 /*=============================letter4 rules=========================================*/
 #l4v1 {
-  animation-delay: 700ms;
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
 }
 
 #l4v2 {
-  animation-delay: 8300ms;
+  -webkit-animation-delay: 8300ms;
+          animation-delay: 8300ms;
 }
 
 /*=============================letter5 rules=========================================*/
 #l5v1 {
-  animation-delay: 5900ms;
+  -webkit-animation-delay: 5900ms;
+          animation-delay: 5900ms;
 }
 
 #l5v2 {
-  animation-delay: 9900ms;
+  -webkit-animation-delay: 9900ms;
+          animation-delay: 9900ms;
 }
 
 #l5v3 {
-  animation-delay: 1900ms;
+  -webkit-animation-delay: 1900ms;
+          animation-delay: 1900ms;
 }
 
 #l5v4 {
-  animation-delay: 11700ms;
+  -webkit-animation-delay: 11700ms;
+          animation-delay: 11700ms;
 }
 
 #l5h1 {
-  animation-delay: 5300ms;
+  -webkit-animation-delay: 5300ms;
+          animation-delay: 5300ms;
 }
 
 #l5h2 {
-  animation-delay: 7900ms;
+  -webkit-animation-delay: 7900ms;
+          animation-delay: 7900ms;
 }
 
 #l5d1 {
-  transform: translate(-37%, -65%);
-  animation-delay: 1700ms;
+  -webkit-transform: translate(-37%, -65%);
+          transform: translate(-37%, -65%);
+  -webkit-animation-delay: 1700ms;
+          animation-delay: 1700ms;
 }
 
 #l5d2 {
-  transform: translate(-37%, 65%);
-  animation-delay: 12100ms;
+  -webkit-transform: translate(-37%, 65%);
+          transform: translate(-37%, 65%);
+  -webkit-animation-delay: 12100ms;
+          animation-delay: 12100ms;
 }
 
 #l5c1 {
-  animation-delay: 14600ms;
+  -webkit-animation-delay: 14600ms;
+          animation-delay: 14600ms;
   fill: none;
   fill-opacity: 1;
   fill-rule: evenodd;
@@ -313,7 +389,8 @@
 }
 
 #l5c2 {
-  animation-delay: 14600ms;
+  -webkit-animation-delay: 14600ms;
+          animation-delay: 14600ms;
   fill: none;
   fill-opacity: 1;
   fill-rule: evenodd;
@@ -329,151 +406,210 @@
 
 /*=============================letter6 rules=========================================*/
 #l6v1 {
-  animation-delay: 1500ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
 
 #l6v2 {
-  animation-delay: 4300ms;
+  -webkit-animation-delay: 4300ms;
+          animation-delay: 4300ms;
 }
 
 #l6v3 {
-  animation-delay: 6100ms;
+  -webkit-animation-delay: 6100ms;
+          animation-delay: 6100ms;
 }
 
 #l6h1 {
-  animation-delay: 900ms;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
 }
 
 /*=============================letter7 rules=========================================*/
 #l7v1 {
-  animation-delay: 11900ms;
+  -webkit-animation-delay: 11900ms;
+          animation-delay: 11900ms;
 }
 
 #l7v2 {
-  animation-delay: 5500ms;
+  -webkit-animation-delay: 5500ms;
+          animation-delay: 5500ms;
 }
 
 #l7v3 {
-  animation-delay: 11300ms;
+  -webkit-animation-delay: 11300ms;
+          animation-delay: 11300ms;
 }
 
 #l7v4 {
-  animation-delay: 3700ms;
+  -webkit-animation-delay: 3700ms;
+          animation-delay: 3700ms;
 }
 
 #l7h1 {
-  animation-delay: 9700ms;
+  -webkit-animation-delay: 9700ms;
+          animation-delay: 9700ms;
 }
 
 #l7h2 {
-  animation-delay: 12500ms;
+  -webkit-animation-delay: 12500ms;
+          animation-delay: 12500ms;
 }
 
 #l7h3 {
-  animation-delay: 12900ms;
+  -webkit-animation-delay: 12900ms;
+          animation-delay: 12900ms;
 }
 
 #l7h4 {
-  animation-delay: 3900ms;
+  -webkit-animation-delay: 3900ms;
+          animation-delay: 3900ms;
 }
 
 /*=============================letter8 rules=========================================*/
 #l8v1 {
-  animation-delay: 8700ms;
+  -webkit-animation-delay: 8700ms;
+          animation-delay: 8700ms;
 }
 
 #l8v2 {
-  animation-delay: 2500ms;
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
 }
 
 #l8v3 {
-  animation-delay: 6700ms;
+  -webkit-animation-delay: 6700ms;
+          animation-delay: 6700ms;
 }
 
 #l8v4 {
-  animation-delay: 4900ms;
+  -webkit-animation-delay: 4900ms;
+          animation-delay: 4900ms;
 }
 
 #l8d1 {
-  transform: translate(-30%, 62%);
-  animation-delay: 10900ms;
+  -webkit-transform: translate(-30%, 62%);
+          transform: translate(-30%, 62%);
+  -webkit-animation-delay: 10900ms;
+          animation-delay: 10900ms;
 }
 
 #l8d2 {
-  transform: translate(30%, -62%);
-  animation-delay: 3500ms;
+  -webkit-transform: translate(30%, -62%);
+          transform: translate(30%, -62%);
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
 }
 
 #l8d3 {
-  transform: translate(-29%, -65%);
-  animation-delay: 11500ms;
+  -webkit-transform: translate(-29%, -65%);
+          transform: translate(-29%, -65%);
+  -webkit-animation-delay: 11500ms;
+          animation-delay: 11500ms;
 }
 
 #l8d4 {
-  transform: translate(29%, 65%);
-  animation-delay: 7500ms;
+  -webkit-transform: translate(29%, 65%);
+          transform: translate(29%, 65%);
+  -webkit-animation-delay: 7500ms;
+          animation-delay: 7500ms;
 }
 
 /*=============================letter9 rules=========================================*/
 #l9h1 {
-  animation-delay: 8900ms;
+  -webkit-animation-delay: 8900ms;
+          animation-delay: 8900ms;
 }
 
 #l9h2 {
-  animation-delay: 4100ms;
+  -webkit-animation-delay: 4100ms;
+          animation-delay: 4100ms;
 }
 
 #l9d1 {
-  transform: translate(15%, -65%);
-  animation-delay: 7100ms;
+  -webkit-transform: translate(15%, -65%);
+          transform: translate(15%, -65%);
+  -webkit-animation-delay: 7100ms;
+          animation-delay: 7100ms;
 }
 
 #l9d2 {
-  transform: translate(-15%, 65%);
-  animation-delay: 2700ms;
+  -webkit-transform: translate(-15%, 65%);
+          transform: translate(-15%, 65%);
+  -webkit-animation-delay: 2700ms;
+          animation-delay: 2700ms;
 }
 
 #l9d3 {
-  transform: translate(-16%, -65%);
-  animation-delay: 5700ms;
+  -webkit-transform: translate(-16%, -65%);
+          transform: translate(-16%, -65%);
+  -webkit-animation-delay: 5700ms;
+          animation-delay: 5700ms;
 }
 
 #l9d4 {
-  transform: translate(16%, 65%);
-  animation-delay: 7700ms;
+  -webkit-transform: translate(16%, 65%);
+          transform: translate(16%, 65%);
+  -webkit-animation-delay: 7700ms;
+          animation-delay: 7700ms;
 }
 
 /*=============================KEYFRAMES=========================================*/
+@-webkit-keyframes revealLetter {
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes revealLetter {
   100% {
     opacity: 1;
   }
 }
+@-webkit-keyframes ruleToPositionVert {
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
 @keyframes ruleToPositionVert {
   100% {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+@-webkit-keyframes toPositionVert {
+  100% {
+    -webkit-transform: translateY(0%) rotate(90deg);
+            transform: translateY(0%) rotate(90deg);
   }
 }
 @keyframes toPositionVert {
   100% {
-    transform: translateY(0%) rotate(90deg);
+    -webkit-transform: translateY(0%) rotate(90deg);
+            transform: translateY(0%) rotate(90deg);
+  }
+}
+@-webkit-keyframes toPositionHorz {
+  100% {
+    -webkit-transform: translateX(0%) scale(-1);
+            transform: translateX(0%) scale(-1);
   }
 }
 @keyframes toPositionHorz {
   100% {
-    transform: translateX(0%) scale(-1);
+    -webkit-transform: translateX(0%) scale(-1);
+            transform: translateX(0%) scale(-1);
+  }
+}
+@-webkit-keyframes toPositionDiag {
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
   }
 }
 @keyframes toPositionDiag {
   100% {
-    transform: translate(0%, 0%);
-  }
-}
-@keyframes removeAnimation {
-  99% {
-    opacity: 0;
-  }
-  100% {
-    display: none;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
   }
 }
