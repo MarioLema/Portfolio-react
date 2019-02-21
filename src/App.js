@@ -41,7 +41,7 @@ class App extends Component {
             "The page takes advantage of the CSS grid feature and both the clock and background have been constructed exploiting this feature.",
             "Have a go at the clock and reload the page to see the background palette change!"
           ],
-          pageLink: "",
+          pageLink: "https://mariolema.github.io/pomodoro-app/",
           githubLink: "https://github.com/MarioLema/pomodoro-app"
         },
         weatherCards: {
@@ -53,7 +53,7 @@ class App extends Component {
             "3 of the cards use the same geolocation API. For the Mars weather card, an API provided by the NASA in combination with the CSIC-INTA relays the data found by the Mars Rover Curiosity. The Curiosity contains a series of environmental sensors known REMS that collect the weather data in Mars.",
             "The cards have individual animations with sunsets and meteor showers that activate when you hover your mouse over them."
           ],
-          pageLink: "",
+          pageLink: "https://mariolema.github.io/mars-react/",
           githubLink: "https://github.com/MarioLema/mars-react"
         },
         calculator: {
@@ -63,7 +63,7 @@ class App extends Component {
           description: [
             "A simple calculator widget built with React. It can be overlapped into any website."
           ],
-          pageLink: "",
+          pageLink: "https://mariolema.github.io/react-calculator/",
           githubLink: "https://github.com/MarioLema/react-calculator"
         },
         linuxMint: {
@@ -74,7 +74,7 @@ class App extends Component {
             "This mock website is inspired by the Linux Mint Cinnamon Desktop own website. It is intended to continue with the new style and revamp a now outdated look in the actual Linux Mint OS website.",
             "It is constructed without any libraries and only taking advantage of CSS flexbox and CSS grid to achieve responsiveness across devices."
           ],
-          pageLink: "",
+          pageLink: "https://mariolema.github.io/Linux-mint/",
           githubLink: "https://github.com/MarioLema/Linux-mint"
         },
         typhon: {
@@ -85,7 +85,7 @@ class App extends Component {
             "This responsive front-page is a mock design for a fictional gaming computers and accessories website.",
             "Created with Bootstrap and Jquery. It has an original logo design, as well as artwork on the slider, and it plays with CSS transitions to offer an interactive experience."
           ],
-          pageLink: "",
+          pageLink: "https://mariolema.github.io/Typhon/",
           githubLink: "https://github.com/MarioLema/Typhon"
         },
         coreCorrectHealth: {
@@ -97,7 +97,7 @@ class App extends Component {
             "It is a complete redesign of his former website. Built through Wordpress and using Bootstrap and Jquery the multiple pages were merged into one single page for ease of access.",
             "The logo is also a completely new design."
           ],
-          pageLink: "",
+          pageLink: "http://core-correct.com/",
           githubLink: "https://github.com/MarioLema/core-correct"
         },
         portfolio: {
@@ -109,7 +109,7 @@ class App extends Component {
             "It welcomes visitors with a custom made animation built through an SVG object and a series of different keyframes with different delay times.",
             "Both the animation and page are meant to be entirely responsive without using any bootstrap of jquery.",
           ],
-          pageLink: "",
+          pageLink: "https://mariolema.github.io/",
           githubLink: "https://github.com/MarioLema/core-correct"
         }
       },
