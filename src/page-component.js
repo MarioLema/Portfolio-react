@@ -10,20 +10,20 @@ class WebsitePage extends Component {
         {/* PAGE TITLE */}
         <h1 className="section-title">{this.props.activePage.title}</h1>
         {/* PAGE IMAGE */}
-        <div className="image-container">
+        <a className="image-container" href={this.props.activePage.pageLink} target="_blank" rel="noopener noreferrer">
           <img className="web-image" src={this.props.activePage.media} alt="" />
-        </div>
+        </a>
         <div className="description-container">
           <h3>LANGUAGES, FRAMEWORKS AND LIBRARIES</h3>
           <div className="logos-container">
             {/* ITERATOR FOR FRAMEWORKS LOGOS */}
             {this.props.activePage.libraries.map((logo, index) => (
+              <div className="logo-image" key={`logo${index}`}>
               <img
                 src={logo}
                 alt=""
-                className="logo-image"
-                key={`logo${index}`}
               />
+              </div>
             ))}
           </div>
           <div className="web-description">
