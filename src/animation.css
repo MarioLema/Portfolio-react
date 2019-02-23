@@ -1,6 +1,7 @@
 /*=============================CONTAINER PROPERTIES=========================================*/
 .animation-container {
   background: rgb(0, 70, 84);
+  background: red;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
