@@ -14,14 +14,16 @@ import jsLogo from "./images/js-logo.png";
 import bootstrapLogo from "./images/bootstrap-logo.png";
 import jqueryLogo from "./images/jquery-logo.png";
 import reactLogo from "./images/react-logo.png";
+import mail from "./images/mail.svg";
 //IMPORT WEBSITE IMAGES
-import coreCorrectImage from "./images/core-correct.jpg";
-import calculatorImage from "./images/calculator.jpg";
-import linuxMintImage from "./images/linux-mint.jpg";
-import PomodoroImage from "./images/pomodoro.jpg";
-import typhonImage from "./images/typhon.jpg";
-import portfolioImage from "./images/portfolio.jpg";
-import weatherCardsImage from "./images/weather-cards.jpg";
+import coreCorrectImage from "./images/core-correct-sizes.png";
+import calculatorImage from "./images/calculator-sizes.png";
+import linuxMintImage from "./images/linux-mint-sizes.png";
+import PomodoroImage from "./images/pomodoro-sizes.png";
+import typhonImage from "./images/typhon-sizes.png";
+import portfolioImage from "./images/portfolio-sizes.png";
+import weatherCardsImage from "./images/weather-cards-sizes.png";
+import freshAirImage from "./images/fresh-air-sizes.png";
 //IMPORT CSS FILES
 import "./App.css";
 
@@ -111,7 +113,17 @@ class App extends Component {
           ],
           pageLink: "https://mariolema.github.io/",
           githubLink: "https://github.com/MarioLema/core-correct"
-        }
+        },
+        freshAir: {
+          title: "FRESH AIR",
+          media: freshAirImage,
+          libraries: [htmlLogo, cssLogo, bootstrapLogo],
+          description: [
+            "This mock design showcases modern CSS technologies without any (almost) javascript. This is a redesign of an original page created by Jonas Schmedtmann. It has been rebranded and rebuilt with Bootstrap 4."
+          ],
+          pageLink: "https://mariolema.github.io/Oxygen/",
+          githubLink: "https://github.com/MarioLema/Oxygen"
+        },
       },
       // DISPLAY HANDLE OF DIFFERENT PAGES
       display: {
@@ -124,13 +136,14 @@ class App extends Component {
         weatherCards: HIDDEN,
         calculator: HIDDEN,
         portfolio: HIDDEN,
+        freshAir: HIDDEN,
         animation: {}
       },
       currentDisplay: "intro"
     };
     this.changeDisplay = this.changeDisplay.bind(this);
   }
-  // CHANGES THE PAGES TO ACTIVELY DISPLAY THEM AND HIDDES THE LAST ACTIVE ONE
+  // CHANGES THE PAGES TO ACTIVELY DISPLAY THEM AND HIDES THE LAST ACTIVE ONE
   changeDisplay(event, page) {
     let newState = { ...this.state };
     newState.display[newState.currentDisplay] = HIDDEN;
@@ -143,7 +156,7 @@ class App extends Component {
     return (
       <div className="App">
         <Animation display={this.state.display.animation} />
-        <div id="page-header">
+        <div className="page-header">
           <img src={logoSub} id="logo-image" alt="" />
         </div>
         <NavigationMenu changeDisplay={this.changeDisplay} />
@@ -155,6 +168,10 @@ class App extends Component {
           activePage={this.state.pages.coreCorrectHealth}
           style={this.state.display.coreCorrect}
         />
+        <WebsitePage
+        activePage={this.state.pages.freshAir}
+        style={this.state.display.freshAir}
+      />
         <WebsitePage
           activePage={this.state.pages.linuxMint}
           style={this.state.display.linuxMint}
@@ -188,7 +205,8 @@ class App extends Component {
           className="contact-button"
           onClick={event => this.changeDisplay(event, "contact")}
         >
-          CONTACT ME
+          <span>CONTACT ME</span>
+          <img className="contact-button__icon" src={mail} alt=""></img>
         </button>
       </div>
     );
@@ -197,8 +215,8 @@ class App extends Component {
 
 /*=========================FOOTER============================================= */
 const Footer = () => (
-  <footer>
-    <div>
+  <footer className="footer">
+    <div className="footer__container">
       <span>
         This work is licensed under a Creative Commons International License
       </span>

@@ -5,52 +5,58 @@ import React, { Component } from "react";
 class NavigationMenu extends Component {
   render() {
     return (
-      <nav>
-        <ul className="menu-list">
+      <nav className="primary-nav">
+        <ul className="primary-nav__menu">
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "intro")}
           >
             who am I
           </li>
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "coreCorrect")}
           >
             Core Correct
           </li>
           <li
-            className="list-link"
+          className="primary-nav__menu__item"
+          onClick={event => this.props.changeDisplay(event, "freshAir")}
+        >
+          Fresh Air
+        </li>
+          <li
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "linuxMint")}
           >
             Linux Mint
           </li>
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "typhon")}
           >
             Typhon
           </li>
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "pomodoro")}
           >
             Pomodoro Clock
           </li>
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "weatherCards")}
           >
             Weather Cards
           </li>
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "calculator")}
           >
             Calculator
           </li>
           <li
-            className="list-link"
+            className="primary-nav__menu__item"
             onClick={event => this.props.changeDisplay(event, "portfolio")}
           >
             Portfolio

@@ -5,9 +5,9 @@ import aboutImage from "./images/portrait-drawing.svg";
   class AboutMe extends Component {
     render() {
       return (
-        <div className="about-me" style={this.props.style}>
-          <img src={aboutImage} alt="" className="about-image" />
-          <div className="about-text-container">
+        <div className="about-container" style={this.props.style}>
+          <img src={aboutImage} alt="" className="about-container__image" />
+          <div className="about-container__text">
             <span>HI!</span>
             <br />
             <p>I'm Mario, a Front End Developer based in London, UK.</p>

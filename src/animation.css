@@ -14,16 +14,18 @@
   justify-content: center;
   position: fixed;
   z-index: 100;
+  top: 0;
+  left: 0;
 }
 .svg-container {
   width: 80%;
-  max-width: 1500px;
+  max-width: 94rem;
 }
 .svg-object {
   max-width: 100%;
   height: auto;
 }
-#rect977 {
+#rectangle-container {
   fill: #002d3b;
 }
 #rect977-4 {
@@ -38,8 +40,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin: 2em;
-  height: 3em;
+  margin: 2rem;
+  height: 3rem;
   -webkit-animation-delay: 5000ms;
   animation-delay: 5000ms;
   cursor: pointer;

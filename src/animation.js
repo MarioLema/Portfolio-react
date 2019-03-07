@@ -37,7 +37,7 @@ class Animation extends Component {
           >
             {/* CONTAINING BOX AND VISIBLE ANIMATION AREA */}
             <rect
-              id="rect977"
+              id="rectangle-container"
               y="2.8421709e-014"
               x="0"
               height="493.42255"

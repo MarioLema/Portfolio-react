@@ -8,17 +8,17 @@ class WebsitePage extends Component {
     return (
       <div className="page-container" style={this.props.style}>
         {/* PAGE TITLE */}
-        <h1 className="section-title">{this.props.activePage.title}</h1>
+        <h1 className="page-container__title">{this.props.activePage.title}</h1>
         {/* PAGE IMAGE */}
-        <a className="image-container" href={this.props.activePage.pageLink} target="_blank" rel="noopener noreferrer">
-          <img className="web-image" src={this.props.activePage.media} alt="" />
+        <a className="page-container__image-link" href={this.props.activePage.pageLink} target="_blank" rel="noopener noreferrer">
+          <img className="page-container__image" src={this.props.activePage.media} alt="" />
         </a>
-        <div className="description-container">
+        <div className="info-container">
           <h3>LANGUAGES, FRAMEWORKS AND LIBRARIES</h3>
-          <div className="logos-container">
+          <div className="info-container__logos">
             {/* ITERATOR FOR FRAMEWORKS LOGOS */}
             {this.props.activePage.libraries.map((logo, index) => (
-              <div className="logo-image" key={`logo${index}`}>
+              <div className="info-container__logos__image" key={`logo${index}`}>
               <img
                 src={logo}
                 alt=""
@@ -26,7 +26,7 @@ class WebsitePage extends Component {
               </div>
             ))}
           </div>
-          <div className="web-description">
+          <div className="info-container__description">
             {/* ITERATOR FOR TEXT PARAGRAPHS */}
             {this.props.activePage.description.map((paragraph, index) => (
               <p key={`para${index}`}>{paragraph}</p>
@@ -34,20 +34,20 @@ class WebsitePage extends Component {
           </div>
           <h3>LINKS</h3>
           {/* LINKS TO EXTERNAL PAGES */}
-          <div className="logos-container">
+          <div className="info-container__logos">
             <a
               href={this.props.activePage.pageLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={screenLogo} alt="" className="logo-image code-link" />
+              <img src={screenLogo} alt="" className="info-container__logos__image code-link" />
             </a>
             <a
               href={this.props.activePage.githubLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={githubLogo} alt="" className="logo-image code-link" />
+              <img src={githubLogo} alt="" className="info-container__logos__image code-link" />
             </a>
           </div>
         </div>
