@@ -1,0 +1,42 @@
+.animation-container {
+  background: $primary-color;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.svg-container {
+  width: 80%;
+  max-width: 94rem;
+}
+
+.svg-object {
+  max-width: 100%;
+  height: auto;
+}
+
+#rectangle-container {
+  fill: $primary-color;
+}
+
+#rect977-4 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-opacity: 0.5;
+}
+
+.disable-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 2rem;
+  height: 3rem;
+  animation-delay: 5000ms;
+  cursor: pointer;
+}

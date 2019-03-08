@@ -1,0 +1,35 @@
+//media query manager
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+@mixin responsive($size){
+    // Extra Small devices (mobile, 576px and less)
+    @if $size == xs{
+        @media screen and (max-width: 36rem){ @content };
+    }
+    // Small devices (mobile, 768px and less)
+    @if $size == sm{
+        @media screen and (max-width: 48rem){ @content };
+    }
+    // Medium devices (tablets, 992px and less)
+    @if $size == md{
+        @media screen and (max-width: 62rem){ @content };
+    }
+    // large devices (desktops, 1200px and less)
+    @if $size == lg{
+        @media screen and (max-width: 75rem){ @content };
+    }
+};
+
+//GRID SUPPORT MIXIN
+@mixin grid{
+@supports (display: grid){@content}
+};
+
+
+// HOVER SUPPORT
+@mixin hover{
+    @media (hover: hover) { @content};
+}
+

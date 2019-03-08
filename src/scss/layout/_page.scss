@@ -1,0 +1,163 @@
+/* ======================APP SETUP============================ */
+.App {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @include grid {
+    display: grid;
+    grid-template-columns: 16rem 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  @include responsive(lg) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* ======================CONTACT CONTAINER============================ */
+.contact-container {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  font-size: 1.3rem;
+  justify-content: space-evenly;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 1.5rem;
+  padding: 1rem;
+
+  &>h2 {
+    grid-row: 1/2;
+    margin: auto;
+    padding: 0.5rem;
+    border-bottom: $border-style;
+    font-family: 'Comfortaa', cursive;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  @include responsive(sm) {
+    display: flex;
+    flex-direction: column;
+
+    &>h2 {
+      margin: 2rem auto;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+
+/* ======================CONTACT CONTAINER============================ */
+.page-container {
+  grid-column: 2/-1;
+  margin: 2rem;
+  padding: 1.5rem;
+  max-width: 94rem;
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  @include grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    border: $border-style;
+  }
+
+  @include responsive(md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include responsive(xs) {
+    font-size: 0.9rem;
+  }
+}
+
+.page-container__title {
+  margin: auto;
+  padding: 0.5rem;
+  border-bottom: solid rgba(255, 255, 255, 0.2) 1px;
+  grid-column: 1/-1;
+  font-family: 'Comfortaa', cursive;
+  font-weight: lighter;
+
+  @include responsive(xs) {
+    font-size: 1.1rem;
+  }
+}
+
+.page-container__image-link {
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  margin: 1.5rem;
+  align-self: center;
+  max-width: 43.5rem;
+}
+
+.page-container__image {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 30rem;
+  max-width: 30rem;
+}
+
+.info-container {
+  padding: 1rem;
+  font-family: "Rajdhani", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-container__description {
+  font-size: 1.2rem;
+
+  @include responsive(xs) {
+    text-align: justify;
+  }
+}
+
+.info-container__logos {
+  display: flex;
+  height: auto;
+}
+
+.info-container__logos__image {
+  padding: 0.5rem;
+  height: 2.5rem;
+  opacity: 0.8;
+  max-width: 2.5rem;
+
+  &>img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+.code-link {
+  @include hover {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+}

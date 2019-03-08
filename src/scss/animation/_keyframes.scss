@@ -1,0 +1,29 @@
+  @keyframes revealLetter {
+      100% {
+          opacity: 1;
+      }
+  }
+
+  @keyframes ruleToPositionVert {
+      100% {
+          transform: translateX(0%);
+      }
+  }
+
+  @keyframes toPositionVert {
+      100% {
+          transform: translateY(0%) rotate(90deg);
+      }
+  }
+
+  @keyframes toPositionHorz {
+      100% {
+          transform: translateX(0%) scale(-1);
+      }
+  }
+
+  @keyframes toPositionDiag {
+      100% {
+          transform: translate(0%, 0%);
+      }
+  }

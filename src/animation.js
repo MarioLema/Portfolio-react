@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import disableButton from "./images/disable-animation.svg";
-import "./animation.css";
 
 class Animation extends Component {
   constructor(props) {

@@ -1,0 +1,28 @@
+.page-header {
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+#logo-image {
+    width: 50%;
+    max-width: 34rem;
+    margin: 1rem auto;
+    display: block;
+
+    @include responsive(lg) {
+        max-width: 30rem;
+    }
+
+    @include responsive(sm) {
+        max-width: 28rem;
+    }
+
+    @include responsive(md) {
+        max-width: 24rem;
+    }
+
+    @include responsive(xs) {
+        max-width: 20rem;
+    }
+}

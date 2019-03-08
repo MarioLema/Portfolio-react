@@ -1,0 +1,40 @@
+.animated-item {
+  animation-duration: 3000ms;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  fill: #ffffff;
+}
+
+.opacity-object {
+  opacity: 0;
+  animation-name: revealLetter;
+}
+
+.vertical-line {
+  animation-name: toPositionVert;
+}
+
+.horizontal-line {
+  animation-name: toPositionHorz;
+}
+
+.diagonal-line {
+  animation-name: toPositionDiag;
+}
+
+.top-to-bottom {
+  transform: translateY(100%) rotate(90deg);
+}
+
+.bottom-to-top {
+  transform: translateY(-100%) rotate(90deg);
+}
+
+.left-to-right {
+  transform: translateX(-100%) scale(-1);
+}
+
+.right-to-left {
+  transform: translateX(100%) scale(-1);
+}

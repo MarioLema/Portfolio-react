@@ -14,6 +14,7 @@ import jsLogo from "./images/js-logo.png";
 import bootstrapLogo from "./images/bootstrap-logo.png";
 import jqueryLogo from "./images/jquery-logo.png";
 import reactLogo from "./images/react-logo.png";
+import sassLogo from "./images/sass-logo.png";
 import mail from "./images/mail.svg";
 //IMPORT WEBSITE IMAGES
 import coreCorrectImage from "./images/core-correct-sizes.png";
@@ -25,7 +26,7 @@ import portfolioImage from "./images/portfolio-sizes.png";
 import weatherCardsImage from "./images/weather-cards-sizes.png";
 import freshAirImage from "./images/fresh-air-sizes.png";
 //IMPORT CSS FILES
-import "./App.css";
+import "./scss/app.scss";
 
 const HIDDEN = { display: "none" };
 
@@ -71,7 +72,7 @@ class App extends Component {
         linuxMint: {
           title: "LINUX MINT",
           media: linuxMintImage,
-          libraries: [htmlLogo, cssLogo, jsLogo],
+          libraries: [htmlLogo, cssLogo, jsLogo, sassLogo],
           description: [
             "This mock website is inspired by the Linux Mint Cinnamon Desktop own website. It is intended to continue with the new style and revamp a now outdated look in the actual Linux Mint OS website.",
             "It is constructed without any libraries and only taking advantage of CSS flexbox and CSS grid to achieve responsiveness across devices."
@@ -105,7 +106,7 @@ class App extends Component {
         portfolio: {
           title: "PORTFOLIO",
           media: portfolioImage,
-          libraries: [htmlLogo, cssLogo, jsLogo, bootstrapLogo, jqueryLogo],
+          libraries: [htmlLogo, cssLogo, jsLogo, sassLogo, reactLogo],
           description: [
             "The portfolio itself has been built with React. It is meant to be a one page fitting the entire browser window and that will change its display upon clicking on the different section handlers.",
             "It welcomes visitors with a custom made animation built through an SVG object and a series of different keyframes with different delay times.",
@@ -117,7 +118,7 @@ class App extends Component {
         freshAir: {
           title: "FRESH AIR",
           media: freshAirImage,
-          libraries: [htmlLogo, cssLogo, bootstrapLogo],
+          libraries: [htmlLogo, cssLogo, bootstrapLogo, sassLogo],
           description: [
             "This mock design showcases modern CSS technologies without any (almost) javascript. This is a redesign of an original page created by Jonas Schmedtmann. It has been rebranded and rebuilt with Bootstrap 4."
           ],

@@ -1,0 +1,43 @@
+.about-container {
+  grid-column: 2/-1;
+  margin: 2rem;
+  padding: 1.5rem;
+  align-self: center;
+  justify-self: center;
+  max-width: 62.5rem;
+  border: $border-style;
+  width: 80%;
+}
+
+@include grid {
+  width: 100%;
+}
+
+.about-container__image {
+  float: left;
+  float: inline-start;
+  margin: 1rem;
+  width: 25%;
+  max-width: 17rem;
+  shape-outside: circle(50% at 50% 50%);
+
+  @include responsive(xs) {
+    float: initial;
+    width: 80%;
+  }
+}
+
+.about-container__text {
+  font-family: "Nixie One", cursive;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+  &>span {
+    font-size: 1.5rem;
+  }
+
+  @include responsive(xs) {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}

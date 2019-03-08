@@ -1,0 +1,79 @@
+.contact-button {
+  border-top: $border-style;
+  border-bottom: $border-style;
+  border-right: none;
+  border-left: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  color: $text-color;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 200ms;
+
+  @include hover {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &::after {
+    content: " ";
+    border-right: $border-style;
+    top: -10px;
+    right: 10px;
+    position: absolute;
+    height: 150%;
+  }
+
+  &::before {
+    content: " ";
+    border-left: $border-style;
+    top: -10px;
+    left: 10px;
+    position: absolute;
+    height: 150%;
+  }
+
+  @include responsive(md) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  @include responsive(sm) {
+
+    &,
+    &::after,
+    &::before {
+      border: none !important;
+    }
+
+    &>span {
+      display: none;
+    }
+  }
+
+  @include responsive(xs) {
+    top: 0.5rem;
+    right: 0rem;
+  }
+}
+
+.contact-button__icon {
+  display: none;
+
+  @include responsive(sm) {
+    display: initial;
+    opacity: 0.7;
+    height: 1.5rem;
+  }
+
+  @include responsive(xs) {
+    height: 1rem;
+  }
+}
